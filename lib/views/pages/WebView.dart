@@ -1,5 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
+import 'package:flutter/foundation.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 import 'package:webview_flutter/webview_flutter.dart';
@@ -36,6 +38,9 @@ class _LoadWebPage extends State<LoadWebPage> {
           onWebViewCreated: (WebViewController webViewController) async {
             _makeGetRequest(webViewController,widget.selectedUrl);
           },
+          gestureRecognizers: Set()
+            ..add(Factory<VerticalDragGestureRecognizer>(
+                    () => VerticalDragGestureRecognizer())),
         )
     );
   }

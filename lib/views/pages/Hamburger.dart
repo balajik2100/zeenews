@@ -241,7 +241,9 @@ class HamburgerState extends State<Hamburger> {
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
             GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Navigator.pop(context);
+                },
                 child: Container(
                   padding: EdgeInsets.all(1.0),
                   decoration: BoxDecoration(

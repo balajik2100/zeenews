@@ -93,7 +93,7 @@ class _MainPageState extends State<MainPage>
                                   child: CustomDialog(context: context));
                             });
                       },
-                      child: Icon(Icons.add)),
+                      child:    Text("(E)")),
                 ],
               ),
               Row(
@@ -131,7 +131,7 @@ class _MainPageState extends State<MainPage>
                   GestureDetector(
                       onTap: () {}, child: Icon(Icons.notifications)),
                   GestureDetector(
-                      onTap: () {}, child: Icon(Icons.attach_money)),
+                      onTap: () {}, child: Text(" C",)),
                 ],
               ),
             ],

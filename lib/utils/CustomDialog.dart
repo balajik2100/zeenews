@@ -54,43 +54,56 @@ class CustomDialog extends StatelessWidget {
   }
 
   Widget LanguageList({List<Langauages> languageData, BuildContext context}) {
-    return Container(
-      alignment: Alignment.center,
-      height: Utils.getScreenHeight(context) / 1.5,
-      margin: EdgeInsets.only(left: 0.0, right: 0.0),
-      child: Column(
-        mainAxisSize: MainAxisSize.max,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: <Widget>[
-          Container(
-              padding: EdgeInsets.all(8.0),
-              color: Colors.white,
-              alignment: Alignment.center,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  Text("E"),
-                  Text("Select Language",style: TextStyle(color: Colors.black,fontSize: 16)),
-                  GestureDetector(onTap: (){
-                    Navigator.of(context).pop();
-                  },child: Icon(Icons.close),)
+    return GestureDetector(
+        onTap: () {
+          Navigator.of(context).pop();
+        },
+        child: Container(
 
-                ],
-              )),
-          Container(
-              height: Utils.getScreenHeight(context) / 2,
-              color: Colors.white,
-              child: ListView.builder(
-                itemBuilder: (context, index) {
-                  return ListviewWidget(
-                      language: languageData[index], context: context);
-                },
-                scrollDirection: Axis.vertical,
-                itemCount: languageData.length,
-                physics: ClampingScrollPhysics(),
-              ))
-        ],
-      ),
-    );
+          alignment: Alignment.center,
+          height: Utils.getScreenHeight(context) / 1.8,
+          margin: EdgeInsets.only(left: 0.0, right: 0.0),
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.all(Radius.circular(16.0)),
+              color: Colors.white),
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              Container(
+                  padding: EdgeInsets.all(8.0),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.only(topLeft:  Radius.circular(16.0),topRight:  Radius.circular(16.0)),
+                      color: Colors.white),
+                  alignment: Alignment.center,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      Text("(E)",style: TextStyle(color: Colors.white),),
+                      Text("(E) Select Language",
+                          style: TextStyle(color: Colors.black, fontSize: 16)),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).pop();
+                        },
+                        child: Icon(Icons.close),
+                      )
+                    ],
+                  )),
+              Container(
+                  height: Utils.getScreenHeight(context) / 2,
+                  color: Colors.white,
+                  child: ListView.builder(
+                    itemBuilder: (context, index) {
+                      return ListviewWidget(
+                          language: languageData[index], context: context);
+                    },
+                    scrollDirection: Axis.vertical,
+                    itemCount: languageData.length,
+                    physics: ClampingScrollPhysics(),
+                  ))
+            ],
+          ),
+        ));
   }
 }
