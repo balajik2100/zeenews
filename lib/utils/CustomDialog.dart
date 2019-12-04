@@ -1,0 +1,96 @@
+import 'package:flutter/material.dart';
+import 'package:scoped_model/scoped_model.dart';
+import 'package:zeenews/interfaces/ZeeNewsAPIInterface.dart';
+import 'package:zeenews/models/LanguageResponseData.dart';
+import 'package:zeenews/services/ZeeAPIService.dart';
+import 'package:zeenews/utils/Utils.dart';
+import 'package:zeenews/view_models/MainPageViewModel.dart';
+import 'package:zeenews/views/widgets/InternetConnection.dart';
+import 'package:zeenews/views/widgets/ListviewWidget.dart';
+
+class CustomDialog extends StatelessWidget {
+  BuildContext context;
+
+  CustomDialog({@required this.context});
+
+  @override
+  Widget build(BuildContext context) {
+    return Dialog(
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16.0)),
+      elevation: 0.0,
+      backgroundColor: Colors.transparent,
+      child: dialogContent(context),
+    );
+  }
+
+  Widget dialogContent(BuildContext context) {
+    return ScopedModelDescendant<MainPageViewModel>(builder: (_, __, model) {
+      return FutureBuilder<List<Langauages>>(
+        future: model.language,
+        // ignore: missing_return
+        builder: (_, AsyncSnapshot<List<Langauages>> snapshot) {
+          switch (snapshot.connectionState) {
+            // ignore: missing_return
+            case ConnectionState.none:
+            case ConnectionState.active:
+            case ConnectionState.waiting:
+              return Center(child: CircularProgressIndicator());
+            case ConnectionState.done:
+              if (snapshot.hasData) {
+                var languageData = snapshot.data;
+                return LanguageList(
+                    languageData: languageData, context: context);
+              } else if (snapshot.hasError) {
+                return InternetConnection(
+                  action: () async {
+                    await model.setLanguageMenu();
+                  },
+                );
+              }
+          }
+        },
+      );
+    });
+  }
+
+  Widget LanguageList({List<Langauages> languageData, BuildContext context}) {
+    return Container(
+      alignment: Alignment.center,
+      height: Utils.getScreenHeight(context) / 1.5,
+      margin: EdgeInsets.only(left: 0.0, right: 0.0),
+      child: Column(
+        mainAxisSize: MainAxisSize.max,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: <Widget>[
+          Container(
+              padding: EdgeInsets.all(8.0),
+              color: Colors.white,
+              alignment: Alignment.center,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  Text("E"),
+                  Text("Select Language",style: TextStyle(color: Colors.black,fontSize: 16)),
+                  GestureDetector(onTap: (){
+                    Navigator.of(context).pop();
+                  },child: Icon(Icons.close),)
+
+                ],
+              )),
+          Container(
+              height: Utils.getScreenHeight(context) / 2,
+              color: Colors.white,
+              child: ListView.builder(
+                itemBuilder: (context, index) {
+                  return ListviewWidget(
+                      language: languageData[index], context: context);
+                },
+                scrollDirection: Axis.vertical,
+                itemCount: languageData.length,
+                physics: ClampingScrollPhysics(),
+              ))
+        ],
+      ),
+    );
+  }
+}
