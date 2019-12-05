@@ -57,7 +57,7 @@ class GalleryWidget extends StatelessWidget {
                   ],
                 ),
                 Container(
-                    padding: EdgeInsets.only(top: 2.0),
+                    padding: EdgeInsets.only(top: 2.0,left: 3.0),
                     alignment: Alignment.center,
                     child: title)
               ],

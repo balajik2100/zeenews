@@ -53,7 +53,7 @@ class _SectionItemState extends State<SectionList> {
                   // ignore: missing_return
                     case ConnectionState.none:
                     case ConnectionState.active:
-                    case ConnectionState.waiting:
+                     case ConnectionState.waiting:
                       return Center(child: CircularProgressIndicator());
                     case ConnectionState.done:
                       if (snapshot.hasData) {

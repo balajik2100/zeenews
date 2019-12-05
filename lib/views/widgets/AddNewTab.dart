@@ -1,11 +1,8 @@
-import 'dart:convert';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_tags/tag.dart';
 import 'package:zeenews/models/SectionResponseData.dart';
 import 'package:zeenews/services/ZeeAPIService.dart';
 import 'package:zeenews/utils/LocalStorageService.dart';
-import 'package:zeenews/utils/ServiceLocator.dart';
 import 'package:zeenews/view_models/MainPageViewModel.dart';
 import 'package:zeenews/views/pages/HomePage.dart';
 
@@ -27,31 +24,12 @@ class AddTabItem extends StatefulWidget {
       : super(key: key);
 
   @override
-  _AddTabItem createState() => _AddTabItem();
+  _AddTabItemState createState() => _AddTabItemState();
 }
 
-class _AddTabItem extends State<AddTabItem>
-    with SingleTickerProviderStateMixin {
-  List<String> _list=List();
+class _AddTabItemState extends State<AddTabItem> {
 
-  bool _symmetry = false;
-  bool _singleItem = false;
-  bool _horizontalScroll = false;
-  int _column = 3;
-  double _fontSize = 16;
-
-  @override
-  void initState() {
-    super.initState();
-    setState(() {
-      loadTags();
-    });
-  }
-
-  List _items;
-  List<String> tempList = [];
-
-  final GlobalKey<TagsState> _tagStateKey = GlobalKey<TagsState>();
+  List<String> selectedProgrammingList = List();
 
   @override
   Widget build(BuildContext context) {
@@ -66,12 +44,8 @@ class _AddTabItem extends State<AddTabItem>
             child: headerSection(),
           ),
           Expanded(
-            flex: 8,
-            child: _tags1,
-          ),
-          Expanded(
-            flex: 1,
-            child: clearSection(),
+            flex: 9,
+            child: chipSelection(),
           ),
           Expanded(
             flex: 1,
@@ -81,46 +55,6 @@ class _AddTabItem extends State<AddTabItem>
       ),
     );
   }
-
-  //showing tags view
-  Widget get _tags1 {
-    return Tags(
-      alignment: WrapAlignment.center,
-      key: _tagStateKey,
-      symmetry: _symmetry,
-      columns: _column,
-      horizontalScroll: _horizontalScroll,
-      //verticalDirection: VerticalDirection.up, textDirection: TextDirection.rtl,
-      heightHorizontalScroll: 60 * (_fontSize / 14),
-      itemCount: _items.length,
-      itemBuilder: (index) {
-        final item = _items[index];
-
-        return ItemTags(
-          key: Key(index.toString()),
-          index: index,
-          title: item,
-          active: false,
-          pressEnabled: true,
-          activeColor: Colors.red,
-          highlightColor: Colors.green,
-          singleItem: _singleItem,
-          customData: item,
-          // splashColor: Colors.green,
-          combine: ItemTagsCombine.withTextBefore,
-          //removeButton: ItemTagsRemoveButton(),
-          textScaleFactor:
-              utf8.encode(item.substring(0, 1)).length > 2 ? 0.8 : 1,
-          textStyle: TextStyle(
-            fontSize: _fontSize,
-          ),
-          onPressed: (item) => {},
-        );
-      },
-    );
-  }
-
-// Allows you to get a list of all the ItemTags
 
   //header section with close icon
   headerSection() {
@@ -138,61 +72,22 @@ class _AddTabItem extends State<AddTabItem>
               Navigator.of(context).pop();
             },
             child: Container(
-              child: Icon(
-                Icons.close,
-                color: Colors.black,
-              ),
+              child: GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).pop();
+                  },
+                  child: Icon(
+                    Icons.close,
+                    color: Colors.black,
+                  )),
             )));
-  }
-
-  //clear the selected tabs menu
-  clearSection() {
-    return GestureDetector(
-        onTap: () {
-          tempList = [];
-          Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(
-                  builder: (_) => AddTabItem(
-                      title: "Add Tab",
-                      mainPageVM: mainPageVM,
-                      sections: widget.sections,
-                      sectionMain: widget.sectionMain))).then((_) => AddTabItem(
-              title: "Add Tab",
-              mainPageVM: mainPageVM,
-              sections: widget.sections,
-              sectionMain: widget.sectionMain));
-
-//          prefix0.Navigator.pop(context);
-//          Navigator.push(
-//            context,
-//            PageRouteBuilder(
-//              pageBuilder: (context, anim1, anim2) => AddTabItem(),
-//              transitionsBuilder: (context, anim1, anim2, child) => FadeTransition(opacity: anim1, child: child),
-//              transitionDuration: Duration(seconds: 1),
-//            ),
-//          );
-        },
-        child: Container(
-          alignment: Alignment.center,
-          padding: EdgeInsets.only(top: 10.0, bottom: 10.0),
-          child: Text(
-            "Clear All",
-            textAlign: TextAlign.center,
-            style: TextStyle(
-                color: Colors.black,
-                fontSize: 16.0,
-                fontWeight: FontWeight.normal,
-                decoration: TextDecoration.underline),
-          ),
-        ));
   }
 
   //update selected tabs menu
   saveSection() {
     return GestureDetector(
         onTap: () {
-          _getActiveTags();
+          // _getActiveTags();
           //navigation and update the screen
           Navigator.of(context).pop();
           Navigator.pushReplacement(
@@ -200,10 +95,8 @@ class _AddTabItem extends State<AddTabItem>
               MaterialPageRoute(
                   builder: (context) => MainPage(
                       viewModel: mainPageVM,
-                      list: tempList,
+                      list: selectedProgrammingList,
                       section: widget.sectionMain)));
-
-
         },
         child: Container(
           alignment: Alignment.center,
@@ -220,19 +113,128 @@ class _AddTabItem extends State<AddTabItem>
         ));
   }
 
-  void _getActiveTags() {
-    List<Item> lst = _tagStateKey.currentState?.getAllItem;
-    lst.where((tag) => tag.active).forEach((tag) => tempList.add(tag.title));
-    //Store the Tab List in Session
-    SharedPref().setTabsList(tempList);
+  chipSelection() {
+    return Center(
+        child: Padding(
+      padding: EdgeInsets.all(10.0),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+          MultiSelectChip(
+            widget.sections,
+            onSelectionChanged: (selectedList) {
+              setState(() {
+                selectedProgrammingList = selectedList;
+                SharedPref().setTabsList(selectedProgrammingList);
+              });
+            },
+          )
+        ],
+      ),
+    ));
+  }
+}
+
+class MultiSelectChip extends StatefulWidget {
+  final List<Sections> reportList;
+  final Function(List<String>) onSelectionChanged;
+
+  MultiSelectChip(this.reportList, {this.onSelectionChanged});
+
+  @override
+  _MultiSelectChipState createState() => _MultiSelectChipState();
+}
+
+class _MultiSelectChipState extends State<MultiSelectChip> {
+  List<String> selectedChoices = List();
+
+  @override
+  void initState() {
+    loadTags();
   }
 
-  void loadTags() async {
-    if(widget.sections!=null &&  widget.sections.length>0){
-      for (int index = 0; index < widget.sections.length; index++) {
-        _list.add(widget.sections[index].title.toString());
-      }
+  void loadTags() {
+    if (SharedPref().getTabsList() != null &&
+        SharedPref().getTabsList() != []) {
+      var list = SharedPref().getTabsList();
+      list.then((rows) {
+        setState(() {
+          for (int i = 0; i < rows.toList().length; i++) {
+            setState(() {
+              selectedChoices.add(rows.toList()[i]);
+            });
+          }
+        });
+      });
     }
-    _items = _list.toList();
+  }
+
+  _buildChoiceList() {
+    List<Widget> choices = List();
+    widget.reportList.forEach((item) {
+      choices.add(Container(
+        padding: const EdgeInsets.all(4.0),
+        child: ChoiceChip(
+          label: Text(item.title),
+          selected: selectedChoices.contains(item.title),
+          labelStyle: TextStyle(color: Colors.white),
+          selectedColor: Colors.red,
+          backgroundColor: Colors.grey,
+          onSelected: (selected) {
+            setState(() {
+              selectedChoices.contains(item.title)
+                  ? selectedChoices.remove(item.title)
+                  : selectedChoices.add(item.title);
+              widget.onSelectionChanged(selectedChoices);
+            });
+          },
+        ),
+      ));
+    });
+    return choices;
+  }
+
+  clearSection() {
+    return GestureDetector(
+        onTap: () {
+          //  tempList = [];
+          //  selectedProgrammingList.clear();
+          setState(() {
+            selectedChoices.clear();
+            SharedPref().setTabsList(selectedChoices);
+          });
+        },
+        child: Container(
+          alignment: Alignment.center,
+          padding: EdgeInsets.only(top: 10.0, bottom: 10.0),
+          child: Text(
+            "Clear All",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+                color: Colors.black,
+                fontSize: 16.0,
+                fontWeight: FontWeight.normal,
+                decoration: TextDecoration.underline),
+          ),
+        ));
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+        child: Column(
+      //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: <Widget>[
+        Expanded(
+          flex: 9,
+          child: Center(child: Wrap(children: _buildChoiceList())),
+        ),
+        Expanded(
+          flex: 1,
+          child: clearSection(),
+        )
+      ],
+    ));
   }
 }

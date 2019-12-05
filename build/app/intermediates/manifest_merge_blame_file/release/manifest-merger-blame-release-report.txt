@@ -31,7 +31,7 @@
 22        android:name="io.flutter.app.FlutterApplication"
 22-->/Users/ravi/Documents/zee/z5x/zeenews/android/app/src/main/AndroidManifest.xml:13:9-57
 23        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-23-->[androidx.core:core:1.0.1] /Users/ravi/.gradle/caches/transforms-2/files-2.1/0ee2ca1ae792e9456593e6b5038fe4a1/core-1.0.1/AndroidManifest.xml:22:18-86
+23-->[androidx.core:core:1.1.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/397f55e652ab2d8b6ad269620ac1e6a0/core-1.1.0/AndroidManifest.xml:24:18-86
 24        android:icon="@mipmap/ic_launcher"
 24-->/Users/ravi/Documents/zee/z5x/zeenews/android/app/src/main/AndroidManifest.xml:15:9-43
 25        android:label="zeenews"
