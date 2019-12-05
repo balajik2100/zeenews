@@ -6,12 +6,14 @@ INJECTED from /Users/ravi/Documents/zee/z5x/zeenews/android/app/src/main/Android
 INJECTED from /Users/ravi/Documents/zee/z5x/zeenews/android/app/src/main/AndroidManifest.xml:2:1-37:12
 MERGED from /Users/ravi/Documents/zee/z5x/zeenews/android/app/src/main/AndroidManifest.xml:2:1-37:12
 MERGED from [:video_player] /Users/ravi/Documents/zee/z5x/zeenews/build/video_player/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
-MERGED from [:shared_preferences] /Users/ravi/Documents/zee/z5x/zeenews/build/shared_preferences/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
-MERGED from [:screen] /Users/ravi/Documents/zee/z5x/zeenews/build/screen/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
-MERGED from [:share] /Users/ravi/Documents/zee/z5x/zeenews/build/share/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
-MERGED from [:flutter_webview_plugin] /Users/ravi/Documents/zee/z5x/zeenews/build/flutter_webview_plugin/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-21:12
 MERGED from [:wakelock] /Users/ravi/Documents/zee/z5x/zeenews/build/wakelock/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:flutter_webview_plugin] /Users/ravi/Documents/zee/z5x/zeenews/build/flutter_webview_plugin/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-21:12
 MERGED from [:webview_flutter] /Users/ravi/Documents/zee/z5x/zeenews/build/webview_flutter/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:path_provider] /Users/ravi/Documents/zee/z5x/zeenews/build/path_provider/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:permission_handler] /Users/ravi/Documents/zee/z5x/zeenews/build/permission_handler/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:shared_preferences] /Users/ravi/Documents/zee/z5x/zeenews/build/shared_preferences/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:share] /Users/ravi/Documents/zee/z5x/zeenews/build/share/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:screen] /Users/ravi/Documents/zee/z5x/zeenews/build/screen/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.android.exoplayer:exoplayer-hls:2.9.6] /Users/ravi/.gradle/caches/transforms-2/files-2.1/87c5b985925b4fbb5c80e8adee4023c4/exoplayer-hls-2.9.6/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.exoplayer:exoplayer-dash:2.9.6] /Users/ravi/.gradle/caches/transforms-2/files-2.1/7ecd1d247fdce4a1ba4eb463a9f230c2/exoplayer-dash-2.9.6/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.9.6] /Users/ravi/.gradle/caches/transforms-2/files-2.1/3a45f2794f174dcfdb5123cc9506277c/exoplayer-smoothstreaming-2.9.6/AndroidManifest.xml:17:1-24:12
@@ -30,18 +32,18 @@ MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/ravi/.gr
 MERGED from [androidx.customview:customview:1.0.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/1b6b667041ee6755feb90290afd42e50/customview-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/3880c5a0ae410c335d2004de5ba3f673/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/a16cea83b34e741f1e8b68a91489be07/asynclayoutinflater-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.core:core:1.0.1] /Users/ravi/.gradle/caches/transforms-2/files-2.1/0ee2ca1ae792e9456593e6b5038fe4a1/core-1.0.1/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/1da382e8202213057e7549fa0b3ab113/versionedparcelable-1.0.0/AndroidManifest.xml:17:1-25:12
+MERGED from [androidx.core:core:1.1.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/397f55e652ab2d8b6ad269620ac1e6a0/core-1.1.0/AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/d6d3695c684bcabb389dc258acd17c46/versionedparcelable-1.1.0/AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/b203fcae2746cb4d35a0f8b13ff1e104/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/3dbeba09ae57ad04802c1900e53e7dba/lifecycle-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/7857375707dbdee9bd556c50760f1a58/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/8acf84692cea40c7a8489df32d23bbbb/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/4b5e4fc4c92f4ff4a3907c510b3a88e4/print-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/93cdf54ca440feb0e26b8a26037a9720/lifecycle-viewmodel-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/3ec511d4e0e0f01047c4329d74364229/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/2670cb47611c993e0d9c5f56b50c8996/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/8b8d70e584776bbb3841feaae3c3b1ed/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/868d17a16ed255533e353d7a568ad6da/core-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/3ec511d4e0e0f01047c4329d74364229/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/3dbeba09ae57ad04802c1900e53e7dba/lifecycle-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
 INJECTED from /Users/ravi/Documents/zee/z5x/zeenews/android/app/src/debug/AndroidManifest.xml:1:1-7:12
 INJECTED from /Users/ravi/Documents/zee/z5x/zeenews/android/app/src/debug/AndroidManifest.xml:1:1-7:12
 INJECTED from /Users/ravi/Documents/zee/z5x/zeenews/android/app/src/debug/AndroidManifest.xml:1:1-7:12
@@ -76,12 +78,12 @@ application
 ADDED from /Users/ravi/Documents/zee/z5x/zeenews/android/app/src/main/AndroidManifest.xml:12:5-36:19
 MERGED from [:flutter_webview_plugin] /Users/ravi/Documents/zee/z5x/zeenews/build/flutter_webview_plugin/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-19:19
 MERGED from [:flutter_webview_plugin] /Users/ravi/Documents/zee/z5x/zeenews/build/flutter_webview_plugin/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-19:19
-MERGED from [androidx.core:core:1.0.1] /Users/ravi/.gradle/caches/transforms-2/files-2.1/0ee2ca1ae792e9456593e6b5038fe4a1/core-1.0.1/AndroidManifest.xml:22:5-89
-MERGED from [androidx.core:core:1.0.1] /Users/ravi/.gradle/caches/transforms-2/files-2.1/0ee2ca1ae792e9456593e6b5038fe4a1/core-1.0.1/AndroidManifest.xml:22:5-89
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/1da382e8202213057e7549fa0b3ab113/versionedparcelable-1.0.0/AndroidManifest.xml:22:5-23:19
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/1da382e8202213057e7549fa0b3ab113/versionedparcelable-1.0.0/AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.core:core:1.1.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/397f55e652ab2d8b6ad269620ac1e6a0/core-1.1.0/AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.1.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/397f55e652ab2d8b6ad269620ac1e6a0/core-1.1.0/AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/d6d3695c684bcabb389dc258acd17c46/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/d6d3695c684bcabb389dc258acd17c46/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
 	android:appComponentFactory
-		ADDED from [androidx.core:core:1.0.1] /Users/ravi/.gradle/caches/transforms-2/files-2.1/0ee2ca1ae792e9456593e6b5038fe4a1/core-1.0.1/AndroidManifest.xml:22:18-86
+		ADDED from [androidx.core:core:1.1.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/397f55e652ab2d8b6ad269620ac1e6a0/core-1.1.0/AndroidManifest.xml:24:18-86
 	android:label
 		ADDED from /Users/ravi/Documents/zee/z5x/zeenews/android/app/src/main/AndroidManifest.xml:14:9-32
 	tools:ignore
@@ -126,18 +128,22 @@ INJECTED from /Users/ravi/Documents/zee/z5x/zeenews/android/app/src/main/Android
 INJECTED from /Users/ravi/Documents/zee/z5x/zeenews/android/app/src/main/AndroidManifest.xml
 MERGED from [:video_player] /Users/ravi/Documents/zee/z5x/zeenews/build/video_player/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:video_player] /Users/ravi/Documents/zee/z5x/zeenews/build/video_player/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:shared_preferences] /Users/ravi/Documents/zee/z5x/zeenews/build/shared_preferences/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:shared_preferences] /Users/ravi/Documents/zee/z5x/zeenews/build/shared_preferences/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:screen] /Users/ravi/Documents/zee/z5x/zeenews/build/screen/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:screen] /Users/ravi/Documents/zee/z5x/zeenews/build/screen/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:share] /Users/ravi/Documents/zee/z5x/zeenews/build/share/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:share] /Users/ravi/Documents/zee/z5x/zeenews/build/share/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:flutter_webview_plugin] /Users/ravi/Documents/zee/z5x/zeenews/build/flutter_webview_plugin/intermediates/library_manifest/debug/AndroidManifest.xml:6:5-44
-MERGED from [:flutter_webview_plugin] /Users/ravi/Documents/zee/z5x/zeenews/build/flutter_webview_plugin/intermediates/library_manifest/debug/AndroidManifest.xml:6:5-44
 MERGED from [:wakelock] /Users/ravi/Documents/zee/z5x/zeenews/build/wakelock/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:wakelock] /Users/ravi/Documents/zee/z5x/zeenews/build/wakelock/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:flutter_webview_plugin] /Users/ravi/Documents/zee/z5x/zeenews/build/flutter_webview_plugin/intermediates/library_manifest/debug/AndroidManifest.xml:6:5-44
+MERGED from [:flutter_webview_plugin] /Users/ravi/Documents/zee/z5x/zeenews/build/flutter_webview_plugin/intermediates/library_manifest/debug/AndroidManifest.xml:6:5-44
 MERGED from [:webview_flutter] /Users/ravi/Documents/zee/z5x/zeenews/build/webview_flutter/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:webview_flutter] /Users/ravi/Documents/zee/z5x/zeenews/build/webview_flutter/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:path_provider] /Users/ravi/Documents/zee/z5x/zeenews/build/path_provider/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:path_provider] /Users/ravi/Documents/zee/z5x/zeenews/build/path_provider/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:permission_handler] /Users/ravi/Documents/zee/z5x/zeenews/build/permission_handler/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:permission_handler] /Users/ravi/Documents/zee/z5x/zeenews/build/permission_handler/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:shared_preferences] /Users/ravi/Documents/zee/z5x/zeenews/build/shared_preferences/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:shared_preferences] /Users/ravi/Documents/zee/z5x/zeenews/build/shared_preferences/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:share] /Users/ravi/Documents/zee/z5x/zeenews/build/share/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:share] /Users/ravi/Documents/zee/z5x/zeenews/build/share/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:screen] /Users/ravi/Documents/zee/z5x/zeenews/build/screen/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:screen] /Users/ravi/Documents/zee/z5x/zeenews/build/screen/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.android.exoplayer:exoplayer-hls:2.9.6] /Users/ravi/.gradle/caches/transforms-2/files-2.1/87c5b985925b4fbb5c80e8adee4023c4/exoplayer-hls-2.9.6/AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.exoplayer:exoplayer-hls:2.9.6] /Users/ravi/.gradle/caches/transforms-2/files-2.1/87c5b985925b4fbb5c80e8adee4023c4/exoplayer-hls-2.9.6/AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.exoplayer:exoplayer-dash:2.9.6] /Users/ravi/.gradle/caches/transforms-2/files-2.1/7ecd1d247fdce4a1ba4eb463a9f230c2/exoplayer-dash-2.9.6/AndroidManifest.xml:20:5-22:41
@@ -174,14 +180,12 @@ MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/ravi/.
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/3880c5a0ae410c335d2004de5ba3f673/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/a16cea83b34e741f1e8b68a91489be07/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/a16cea83b34e741f1e8b68a91489be07/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core:1.0.1] /Users/ravi/.gradle/caches/transforms-2/files-2.1/0ee2ca1ae792e9456593e6b5038fe4a1/core-1.0.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core:1.0.1] /Users/ravi/.gradle/caches/transforms-2/files-2.1/0ee2ca1ae792e9456593e6b5038fe4a1/core-1.0.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/1da382e8202213057e7549fa0b3ab113/versionedparcelable-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/1da382e8202213057e7549fa0b3ab113/versionedparcelable-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.1.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/397f55e652ab2d8b6ad269620ac1e6a0/core-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.1.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/397f55e652ab2d8b6ad269620ac1e6a0/core-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/d6d3695c684bcabb389dc258acd17c46/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/d6d3695c684bcabb389dc258acd17c46/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/b203fcae2746cb4d35a0f8b13ff1e104/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/b203fcae2746cb4d35a0f8b13ff1e104/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/3dbeba09ae57ad04802c1900e53e7dba/lifecycle-runtime-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/3dbeba09ae57ad04802c1900e53e7dba/lifecycle-runtime-2.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/7857375707dbdee9bd556c50760f1a58/documentfile-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/7857375707dbdee9bd556c50760f1a58/documentfile-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/8acf84692cea40c7a8489df32d23bbbb/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
@@ -190,14 +194,16 @@ MERGED from [androidx.print:print:1.0.0] /Users/ravi/.gradle/caches/transforms-2
 MERGED from [androidx.print:print:1.0.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/4b5e4fc4c92f4ff4a3907c510b3a88e4/print-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/93cdf54ca440feb0e26b8a26037a9720/lifecycle-viewmodel-2.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/93cdf54ca440feb0e26b8a26037a9720/lifecycle-viewmodel-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/3ec511d4e0e0f01047c4329d74364229/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/3ec511d4e0e0f01047c4329d74364229/interpolator-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/2670cb47611c993e0d9c5f56b50c8996/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/2670cb47611c993e0d9c5f56b50c8996/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/8b8d70e584776bbb3841feaae3c3b1ed/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/8b8d70e584776bbb3841feaae3c3b1ed/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/868d17a16ed255533e353d7a568ad6da/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/868d17a16ed255533e353d7a568ad6da/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/3ec511d4e0e0f01047c4329d74364229/interpolator-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/3ec511d4e0e0f01047c4329d74364229/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/3dbeba09ae57ad04802c1900e53e7dba/lifecycle-runtime-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/3dbeba09ae57ad04802c1900e53e7dba/lifecycle-runtime-2.0.0/AndroidManifest.xml:20:5-44
 INJECTED from /Users/ravi/Documents/zee/z5x/zeenews/android/app/src/debug/AndroidManifest.xml
 INJECTED from /Users/ravi/Documents/zee/z5x/zeenews/android/app/src/debug/AndroidManifest.xml
 	android:targetSdkVersion

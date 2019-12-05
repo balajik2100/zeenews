@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:zeenews/services/ZeeAPIService.dart';
-import 'package:zeenews/utils/ServiceLocator.dart';
 import 'package:zeenews/utils/ZeeNewsStyles.dart';
 import 'package:zeenews/view_models/MainPageViewModel.dart';
 import 'package:zeenews/views/pages/SplashScreen.dart';
@@ -17,7 +16,6 @@ final MainPageViewModel mainPageVM =
 class ZeeHome extends StatelessWidget {
   final MainPageViewModel mainPageVM;
   List<String> tempList = [];
-
   ZeeHome({@required this.mainPageVM});
 
   @override

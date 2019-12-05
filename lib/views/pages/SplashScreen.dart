@@ -34,6 +34,7 @@ class SplashState extends State<Splash> {
   Widget build(BuildContext context) {
     //Size size = MediaQuery.of(context).size;
     List<String> tempList = [];
+
     /* return ScopedModel(
       model: MainPageViewModel(apiZeeNews: ZeeAPIService()),
       child: Scaffold(
@@ -84,7 +85,12 @@ class SplashState extends State<Splash> {
         ),
       ),
     );*/
-    return (Scaffold(body: Container()));
+
+    return (Scaffold(body: Container(
+      alignment: Alignment.center,
+      padding: EdgeInsets.all(30.0),
+      child: Text("ZEE NEWS",style: TextStyle(color: Colors.white,backgroundColor: Colors.red,fontSize: 40,decoration: TextDecoration.underline,)),
+    )));
   }
 
   @override
@@ -123,9 +129,12 @@ class SplashState extends State<Splash> {
     section = new SectionResponseData.fromMap(jsonResponse);
 
     if (section != null) {
-      Navigator.of(context).push(MaterialPageRoute(
+    /*  Navigator.of(context).push(MaterialPageRoute(
           builder: (context) => MainPage(
-              viewModel: mainPageVM, list: tempList, section: section)));
+              viewModel: mainPageVM, list: tempList, section: section)));*/
+      Route route = MaterialPageRoute(builder: (context) => MainPage(
+          viewModel: mainPageVM, list: tempList, section: section));
+      Navigator.pushReplacement(context, route);
     }
   }
 }

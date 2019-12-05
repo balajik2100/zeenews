@@ -91,7 +91,7 @@ class CustomDialog extends StatelessWidget {
                     ],
                   )),
               Container(
-                  height: Utils.getScreenHeight(context) / 2,
+                  height: Utils.getScreenHeight(context) / 2.3,
                   color: Colors.white,
                   child: ListView.builder(
                     itemBuilder: (context, index) {

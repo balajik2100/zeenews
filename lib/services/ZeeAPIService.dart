@@ -56,11 +56,11 @@ class ZeeAPIService implements ZeeNewsAPIInterface {
               (map[key] as List<dynamic>).map((v) => Item.fromJson(v)).toList();
           BaseSection s = new BaseSection(key, Types.NEWS,"" , topNewList);
           sectionData.add(s);
-        }else if (key == "trending_topic" || key == "most_view") {
+        }else if (key == "trending_topic" /*|| key == "most_view"*/) {
           List<Item> topNewList = (map[key] as List<dynamic>).map((v) => Item.fromJson(v)).toList();
           BaseSection s = new BaseSection(key, Types.CHIPVIEW,"" , topNewList);
           sectionData.add(s);
-        } else if (key == "trending_photos"/* || key=="Photos"*/) {
+        } else if (key == "trending_photos") {
           List<Item> list =
               (map[key] as List<dynamic>).map((v) => Item.fromJson(v)).toList();
           BaseSection s = new BaseSection(key, Types.PHOTO_GALLERY,"" , list);
