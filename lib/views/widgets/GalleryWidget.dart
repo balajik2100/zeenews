@@ -12,7 +12,7 @@ class GalleryWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var title = Text(
-      data?.title,
+      data?.title!=null?data.title:"",
       maxLines: 3,
       style: TextStyle(
         color: Colors.black,
@@ -42,7 +42,7 @@ class GalleryWidget extends StatelessWidget {
                         ),
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(10.0),
-                          child: Image.network(data.thumbnailUrl,
+                          child: Image.network(data.thumbnailUrl!=null?data.thumbnailUrl:"",
                               fit: BoxFit.fill),
                         )),
                     /*data.timestamp != null

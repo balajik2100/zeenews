@@ -2,11 +2,11 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
+import 'package:zeenews/AppLocalizations.dart';
 import 'package:zeenews/models/LanguageResponseData.dart';
 import 'package:zeenews/models/SectionResponseData.dart';
 import 'package:zeenews/utils/ZeeNewsStyles.dart';
 import 'package:zeenews/view_models/MainPageViewModel.dart';
-import 'package:zeenews/views/pages/CardsListView.dart';
 import 'package:zeenews/views/pages/SectionListPage.dart';
 import 'package:zeenews/views/pages/WebView.dart';
 import 'package:zeenews/views/widgets/InternetConnection.dart';
@@ -14,8 +14,13 @@ import 'package:zeenews/views/widgets/InternetConnection.dart';
 class Hamburger extends StatefulWidget {
   final MainPageViewModel viewModel;
   final List<Sections> sections;
+  final TabController tabController;
 
-  Hamburger({Key key, @required this.viewModel, @required this.sections})
+  Hamburger(
+      {Key key,
+      @required this.viewModel,
+      @required this.sections,
+      @required this.tabController})
       : super(key: key);
 
   @override
@@ -26,19 +31,21 @@ class Hamburger extends StatefulWidget {
 }
 
 class HamburgerState extends State<Hamburger> {
-  final List<String> getSetting = [
-    'Contact Us',
-    'Privacy Policy',
-    'Complaint',
-    'Legal Disclaimer',
-    'Investor Info',
-    'Advertise With Us',
-    'Careers',
-    'Where to Watch'
-  ];
+
 
   @override
   Widget build(BuildContext context) {
+
+    final List<String> getSetting = [
+      Translations.of(context).text("contact"),
+      Translations.of(context).text("privacy"),
+      Translations.of(context).text("complaint"),
+      Translations.of(context).text("disclaimer"),
+      Translations.of(context).text("investor"),
+      Translations.of(context).text("advertise"),
+      Translations.of(context).text("career"),
+      Translations.of(context).text("wheretowatch"),
+    ];
     // TODO: implement build
     return Drawer(
         child: ListView(
@@ -91,7 +98,6 @@ class HamburgerState extends State<Hamburger> {
                 return ExpansionTile(
                   title: Text(widget.sections[index].title),
                   leading: Icon(Icons.home),
-                  trailing: Icon(Icons.add),
                   children: [
                     getItemsListForSideMenu(context, widget.sections[index])
                   ],
@@ -242,7 +248,7 @@ class HamburgerState extends State<Hamburger> {
           children: <Widget>[
             GestureDetector(
                 onTap: () {
-                  Navigator.pop(context);
+                  loadHomePage();
                 },
                 child: Container(
                   padding: EdgeInsets.all(1.0),
@@ -264,26 +270,34 @@ class HamburgerState extends State<Hamburger> {
 
   getSocialIcons() {
     return Container(
+        padding: EdgeInsets.only(bottom: 10),
         child: Column(
-      children: <Widget>[
-        Align(
-            alignment: Alignment.centerLeft,
-            child: Padding(
-                padding: EdgeInsets.all(5.0),
-                child: Text(
-                  "CONNECT WITH US",
-                  style: TextStyle(fontWeight: FontWeight.w600),
-                ))),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            Image.asset("assets/images/facebook.png"),
-            Image.asset("assets/images/googleplus.png"),
-            Image.asset("assets/images/twitter.png"),
-            Image.asset("assets/images/youtube.png")
+            Align(
+                alignment: Alignment.centerLeft,
+                child: Padding(
+                    padding: EdgeInsets.all(5.0),
+                    child: Text(
+                      "CONNECT WITH US",
+                      style: TextStyle(fontWeight: FontWeight.w600),
+                    ))),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                Image.asset("assets/images/facebook.png"),
+                Image.asset("assets/images/googleplus.png"),
+                Image.asset("assets/images/twitter.png"),
+                Image.asset("assets/images/youtube.png")
+              ],
+            )
           ],
-        )
-      ],
-    ));
+        ));
+  }
+
+  void loadHomePage() async {
+    Navigator.pop(context);
+    // widget.tabController.animateTo(0);
+    await widget.viewModel
+        .setHomePageSections("https://zeenews.india.com/hindi/pwaapi/home.php");
   }
 }

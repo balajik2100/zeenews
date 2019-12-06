@@ -23,7 +23,7 @@ class Configuration {
 
 
   static const String BASE_URL = "https://stage2.zeenews.com/pwaapi";
-
+ // static const String BASE_URL = "https://zeenews.india.com/pwaapi";
 
   //sectionlist for menu
   static const String SECTION_LIST_URL =BASE_URL+"/sectionlist.php";

@@ -22,4 +22,5 @@ class Utils {
     return MediaQuery.of(context).size.height;
   }
 
+
 }

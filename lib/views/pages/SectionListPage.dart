@@ -41,9 +41,7 @@ class _SectionItemState extends State<SectionList> {
         appBar: AppBar(
           title: Text(widget.title),
         ),
-        body:
-
-        ScopedModelDescendant<MainPageViewModel>(
+        body: ScopedModelDescendant<MainPageViewModel>(
           builder: (_, __, model) {
             return FutureBuilder<List<BaseSection>>(
                 future: model.homepage,
@@ -64,11 +62,15 @@ class _SectionItemState extends State<SectionList> {
                           return Align(alignment: Alignment.center,child:Text("Coming Soon") );
                       }
                       else if (snapshot.hasError) {
-                        return InternetConnection(
-                          action: () async {
-                            await widget.viewModel.setHomePageSections(widget.selectedUrl);
-                          },
-                        );
+                        return Align(
+                          alignment: Alignment.center,
+                          child: InternetConnection(
+                            action: () async{
+                              await widget.viewModel.setHomePageSections(widget.selectedUrl);
+                            },
+                          ),
+                        ) ;
+
                       }else{
                         return Align(alignment: Alignment.center,child:Text("Coming Soon") );
                       }

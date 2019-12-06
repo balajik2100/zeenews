@@ -1,11 +1,13 @@
 import 'dart:convert';
+import 'package:connectivity/connectivity.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:geolocator/geolocator.dart';
 import 'package:http/http.dart';
 import 'package:zeenews/models/SectionResponseData.dart';
 import 'package:zeenews/services/ZeeAPIService.dart';
 import 'package:zeenews/utils/LocalStorageService.dart';
-import 'package:zeenews/utils/ServiceLocator.dart';
+import 'package:zeenews/utils/NetworkDialog.dart';
 import 'package:zeenews/utils/ZeeNewsStyles.dart';
 import 'package:zeenews/view_models/MainPageViewModel.dart';
 import 'package:zeenews/views/pages/HomePage.dart';
@@ -86,55 +88,126 @@ class SplashState extends State<Splash> {
       ),
     );*/
 
-    return (Scaffold(body: Container(
+    return (
+
+        Scaffold(
+        body: Container(
       alignment: Alignment.center,
       padding: EdgeInsets.all(30.0),
-      child: Text("ZEE NEWS",style: TextStyle(color: Colors.white,backgroundColor: Colors.red,fontSize: 40,decoration: TextDecoration.underline,)),
+      child: Text("ZEE NEWS",
+          style: TextStyle(
+            color: Colors.white,
+            backgroundColor: Colors.red,
+            fontSize: 40,
+            decoration: TextDecoration.underline,
+          )),
     )));
   }
 
   @override
   void initState() {
     setState(() {
-      _makeGetRequest();
+      checkConnectivity();
     });
+  }
+
+  void checkConnectivity() async {
+    var connectivityResult = await (Connectivity().checkConnectivity());
+    if (connectivityResult == ConnectivityResult.wifi ||
+        connectivityResult == ConnectivityResult.mobile) {
+      getLocation();
+      _makeGetRequest();
+    } else {
+      networkDialog();
+    }
+  }
+  void networkDialog(){
+    showDialog(
+        context: context,
+        barrierDismissible: false,
+        builder: (BuildContext context) {
+          return NetworkDailog(context: context,viewModel: widget.viewModel);
+        });
   }
 
   _makeGetRequest() async {
     List<String> tempList = [];
     print("+++++++++++++++++");
-    if(SharedPref().getTabsList()!=null && SharedPref().getTabsList()!=[]){
+    if (SharedPref().getTabsList() != null &&
+        SharedPref().getTabsList() != []) {
       var list = SharedPref().getTabsList();
       list.then((rows) {
         setState(() {
-          for(int i=0;i<rows.toList().length;i++){
+          for (int i = 0; i < rows.toList().length; i++) {
             tempList.add(rows.toList()[i]);
           }
         });
       });
     }
 
-
     Response response = await get(Configuration.SECTION_LIST_URL);
 
-    // sample info available in response
-    int statusCode = response.statusCode;
-    Map<String, String> headers = response.headers;
-    String contentType = headers['content-type'];
-    String jsondata = response.body;
-    print("SPlash:::::" + jsondata.toString());
-    // TODO convert json to object...
-    final jsonResponse = json.decode(jsondata);
+    if (response != null) {
+      // sample info available in response
+      int statusCode = response.statusCode;
+      Map<String, String> headers = response.headers;
+      String contentType = headers['content-type'];
+      String jsondata = response.body;
+      print("SPlash:::::" + jsondata.toString());
+      // TODO convert json to object...
+      final jsonResponse = json.decode(jsondata);
 
-    section = new SectionResponseData.fromMap(jsonResponse);
+      section = new SectionResponseData.fromMap(jsonResponse);
 
-    if (section != null) {
-    /*  Navigator.of(context).push(MaterialPageRoute(
+      if (section != null) {
+        /*  Navigator.of(context).push(MaterialPageRoute(
           builder: (context) => MainPage(
               viewModel: mainPageVM, list: tempList, section: section)));*/
-      Route route = MaterialPageRoute(builder: (context) => MainPage(
-          viewModel: mainPageVM, list: tempList, section: section));
-      Navigator.pushReplacement(context, route);
+        Route route = MaterialPageRoute(
+            builder: (context) => MainPage(
+                viewModel: mainPageVM, list: tempList, section: section));
+        Navigator.pushReplacement(context, route);
+      }
+    }else{
+      networkDialog();
     }
+  }
+
+
+  void getLocation() async {
+    Position position = await Geolocator()
+        .getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
+    print("======>>>>");
+    print(position);
+    _getPlace(position);
+  }
+  String _address = ""; // create this variable
+
+  void _getPlace(Position position) async {
+    List<Placemark> newPlace = await Geolocator().placemarkFromCoordinates(position.latitude, position.longitude);
+
+    // this is all you need
+    Placemark placeMark  = newPlace[0];
+    String name = placeMark.name;
+    String subLocality = placeMark.subLocality;
+    String locality = placeMark.locality;
+    String administrativeArea = placeMark.administrativeArea;
+    String postalCode = placeMark.postalCode;
+    String country = placeMark.country;
+    String address = "${name}, ${subLocality}, ${locality}, ${administrativeArea} ${postalCode}, ${country}";
+    print("======>>>>>>");
+    print(address);
+
+    if(this.mounted){
+      setState(() {
+        _address = address; // update _address
+      });
+    }
+
+  }
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
   }
 }

@@ -28,7 +28,6 @@ class AddTabItem extends StatefulWidget {
 }
 
 class _AddTabItemState extends State<AddTabItem> {
-
   List<String> selectedProgrammingList = List();
 
   @override
@@ -58,29 +57,42 @@ class _AddTabItemState extends State<AddTabItem> {
 
   //header section with close icon
   headerSection() {
-    return ListTile(
-        contentPadding: EdgeInsets.all(18.0),
-        title: Text(
-          "Topics",
-          style: TextStyle(
-              color: Colors.black, fontSize: 22.0, fontWeight: FontWeight.bold),
-        ),
-        trailing: GestureDetector(
-            onTap: () {
-              //close the page with out updating menu changes
-              //Navigator.pop(context);
-              Navigator.of(context).pop();
-            },
-            child: Container(
+    return Container(
+      padding: EdgeInsets.only(top: 30, left: 10, right: 10),
+      alignment: Alignment.center,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          Expanded(
+              flex: 9,
+              child: Text(
+                "Topics",
+                style: TextStyle(
+                    color: Colors.red,
+                    fontSize: 22.0,
+                    fontWeight: FontWeight.bold),
+              )),
+          Expanded(
+              flex: 1,
               child: GestureDetector(
                   onTap: () {
                     Navigator.of(context).pop();
                   },
-                  child: Icon(
-                    Icons.close,
-                    color: Colors.black,
-                  )),
-            )));
+                  child: Container(
+                    child: GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).pop();
+                        },
+                        child: Padding(
+                            padding: EdgeInsets.all(2.0),
+                            child: Icon(
+                              Icons.close,
+                              color: Colors.black,
+                            ))),
+                  ))),
+        ],
+      ),
+    );
   }
 
   //update selected tabs menu

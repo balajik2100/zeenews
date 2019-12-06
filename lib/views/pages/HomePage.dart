@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
+import 'package:zeenews/AppLocalizations.dart';
 import 'package:zeenews/models/SectionResponseData.dart';
 import 'package:zeenews/utils/CustomDialog.dart';
 import 'package:zeenews/utils/ZeeNewsStyles.dart';
@@ -82,7 +83,7 @@ class _MainPageState extends State<MainPage>
             children: <Widget>[
               Row(
                 children: <Widget>[
-                  Text(Strings.APP_BAR_TITLE),
+                  Text(Translations.of(context).text('title')),
                   GestureDetector(
                       onTap: () {
                         showDialog(
@@ -90,10 +91,10 @@ class _MainPageState extends State<MainPage>
                             builder: (BuildContext context) {
                               return ScopedModel<MainPageViewModel>(
                                   model: widget.viewModel,
-                                  child: CustomDialog(context: context));
+                                  child: CustomDialog(context: context,viewModel: widget.viewModel));
                             });
                       },
-                      child:    Text("(E)")),
+                      child:Text("(E)")),
                 ],
               ),
               Row(
@@ -120,7 +121,7 @@ class _MainPageState extends State<MainPage>
                           );
                         } else {
                           actionIcon = new Icon(Icons.search);
-                          appBarTitle = new Text(Strings.APP_BAR_TITLE,
+                          appBarTitle = new Text(Translations.of(context).text('title'),
                               style: TextStyle(
                                   fontSize: CustomFontStyle.APP_FONT_SIZE,
                                   color: Colors.white));
@@ -148,7 +149,7 @@ class _MainPageState extends State<MainPage>
       drawer: ScopedModel<MainPageViewModel>(
           model: widget.viewModel,
           child: Hamburger(
-              viewModel: mainPageVM, sections: widget.section.sections)),
+              viewModel: mainPageVM, sections: widget.section.sections,tabController:tabController)),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.of(context).push(MaterialPageRoute(
