@@ -44,7 +44,7 @@ class Sections {
     slug = json['slug'];
     sectionUrl = json['section_url'];
     thumbnailUrl = json['thumbnail_url'];
-    subSections = json['sub_sections'];
+    subSections =json.containsKey("sub_sections")?json['sub_sections']:"";
   //  newsType = json['news_type'];
   //  id = json['id'];
   }

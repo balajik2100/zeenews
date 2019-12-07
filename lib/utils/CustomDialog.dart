@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:scoped_model/scoped_model.dart';
 import 'package:zeenews/interfaces/ZeeNewsAPIInterface.dart';
 import 'package:zeenews/models/LanguageResponseData.dart';
@@ -10,8 +11,9 @@ import 'package:zeenews/views/widgets/ListviewWidget.dart';
 
 class CustomDialog extends StatelessWidget {
   BuildContext context;
+  MainPageViewModel viewModel;
 
-  CustomDialog({@required this.context});
+  CustomDialog({@required this.context,@required this.viewModel});
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +41,7 @@ class CustomDialog extends StatelessWidget {
               if (snapshot.hasData) {
                 var languageData = snapshot.data;
                 return LanguageList(
-                    languageData: languageData, context: context);
+                    languageData: languageData, context: context,viewModel:viewModel);
               } else if (snapshot.hasError) {
                 return InternetConnection(
                   action: () async {
@@ -53,12 +55,13 @@ class CustomDialog extends StatelessWidget {
     });
   }
 
-  Widget LanguageList({List<Langauages> languageData, BuildContext context}) {
+  Widget LanguageList({List<Langauages> languageData, BuildContext context,MainPageViewModel viewModel}) {
     return GestureDetector(
         onTap: () {
           Navigator.of(context).pop();
         },
-        child: Container(
+        child:
+        Container(
 
           alignment: Alignment.center,
           height: Utils.getScreenHeight(context) / 1.8,
@@ -96,7 +99,7 @@ class CustomDialog extends StatelessWidget {
                   child: ListView.builder(
                     itemBuilder: (context, index) {
                       return ListviewWidget(
-                          language: languageData[index], context: context);
+                          language: languageData[index], context: context,viewModel:viewModel);
                     },
                     scrollDirection: Axis.vertical,
                     itemCount: languageData.length,
@@ -107,3 +110,5 @@ class CustomDialog extends StatelessWidget {
         ));
   }
 }
+
+
