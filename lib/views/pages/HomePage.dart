@@ -47,6 +47,7 @@ class _MainPageState extends State<MainPage>
   Future loadData() async {
     await widget.viewModel.setHomePageSections("");
     await widget.viewModel.setLanguageMenu();
+    await widget.viewModel.setVideoPageSection("");
   }
 
   @override
@@ -83,7 +84,7 @@ class _MainPageState extends State<MainPage>
             children: <Widget>[
               Row(
                 children: <Widget>[
-                  Text(Translations.of(context).text('title')),
+                  Text(Translations.of(context).text('title')!=null?Translations.of(context).text('title'):"Zee News"),
                   GestureDetector(
                       onTap: () {
                         showDialog(

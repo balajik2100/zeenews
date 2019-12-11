@@ -5,6 +5,7 @@ import 'package:zeenews/services/ZeeAPIService.dart';
 import 'package:zeenews/utils/ZeeNewsStyles.dart';
 import 'package:zeenews/view_models/MainPageViewModel.dart';
 import 'package:zeenews/views/pages/SplashScreen.dart';
+import 'package:zeenews/views/pages/SplashScreen.dart' as prefix0;
 
 void main() {
 
@@ -52,7 +53,7 @@ class _ZeeHomeState extends State<ZeeHome> {
   @override
   void initState(){
     super.initState();
-    _localeOverrideDelegate = new SpecificLocalizationDelegate(null);
+    _localeOverrideDelegate = new SpecificLocalizationDelegate(new Locale('en',''));
     ///
     /// Let's save a pointer to this method, should the user wants to change its language
     /// We would then call: applic.onLocaleChanged(new Locale('en',''));
@@ -70,7 +71,6 @@ class _ZeeHomeState extends State<ZeeHome> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: Strings.APP_BAR_TITLE,
       theme: new ThemeData(
         primarySwatch: Colors.red,
       ),

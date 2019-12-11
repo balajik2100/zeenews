@@ -1,22 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:scoped_model/scoped_model.dart';
+import 'package:zeenews/main.dart';
 import 'package:zeenews/models/HomeReponseData.dart';
+import 'package:zeenews/services/ZeeAPIService.dart';
 import 'package:zeenews/utils/ZeeNewsStyles.dart';
+import 'package:zeenews/view_models/MainPageViewModel.dart';
+import 'package:zeenews/views/pages/DetailsPageWidget.dart';
 import 'package:zeenews/views/widgets/BannerWidget.dart';
 
 class Banner_NewsWidget extends StatelessWidget {
-
   final Item data;
   final int index;
   final String sectiontitle;
 
   Banner_NewsWidget(
-      {@required this.index, @required this.data,@required this.sectiontitle});
+      {@required this.index, @required this.data, @required this.sectiontitle});
 
   @override
   Widget build(BuildContext context) {
-
     var title = Text(
-      data?.title!=null?data?.title:"",
+      data?.title != null ? data?.title : "",
       maxLines: 2,
       style: TextStyle(
         color: CustomColors.SECTION_TITLE_TXT_COLOR,
@@ -25,7 +28,7 @@ class Banner_NewsWidget extends StatelessWidget {
     );
 
     var subTitle = Text(
-      data?.highlights!=null?data?.highlights:"",
+      data?.highlights != null ? data?.highlights : "",
       maxLines: 3,
       style: TextStyle(
           color: CustomColors.SECTION_SUB_TITLE_TXT_COLOR,
@@ -36,47 +39,45 @@ class Banner_NewsWidget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       mainAxisSize: MainAxisSize.min,
       children: <Widget>[
-
-        Container(
-            child: index==0?BannerWidget(data: data):null
-        ),
-        Container(
-            child: index==0? getTitleWidget(sectiontitle):null
-        ),
-
+        Container(child: index == 0 ? BannerWidget(data: data) : null),
+        Container(child: index == 0 ? getTitleWidget(sectiontitle) : null),
         Container(
             padding:
-            EdgeInsets.only(left: 10.0, right: 10.0, top: 4.0, bottom: 4.0),
+                EdgeInsets.only(left: 10.0, right: 10.0, top: 4.0, bottom: 4.0),
             color: Colors.white,
-            child: Card(
-              elevation: 3.0,
-              child: Row(children: <Widget>[
-                Expanded(
-                    flex: 6,
-                    child: ListTile(
-                      title: title,
-                      subtitle: subTitle,
-                    )),
-                Expanded(
-                  flex: 4,
-                  child:Container(
-                    padding: EdgeInsets.all(3.0),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(15.0)),
-                        border: Border.all(
-                          color: Colors.white,
-                          width: 3,
+            child: GestureDetector(
+                onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute( builder: (context) => DetailsPageWidget(context:context,viewModel: mainPageVM,data: data)));
+                },
+                child: Card(
+                  elevation: 3.0,
+                  child: Row(children: <Widget>[
+                    Expanded(
+                        flex: 6,
+                        child: ListTile(
+                          title: title,
+                          subtitle: subTitle,
                         )),
-                    child: Image.network(
-                      data.thumbnailUrl!=null?data?.thumbnailUrl:"",
-                      width: 250,
-                      fit: BoxFit.contain,
+                    Expanded(
+                      flex: 4,
+                      child: Container(
+                        padding: EdgeInsets.all(3.0),
+                        decoration: BoxDecoration(
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(15.0)),
+                            border: Border.all(
+                              color: Colors.white,
+                              width: 3,
+                            )),
+                        child: Image.network(
+                          data.thumbnailUrl != null ? data?.thumbnailUrl : "",
+                          width: 250,
+                          fit: BoxFit.contain,
+                        ),
+                      ),
                     ),
-                  ),
-
-                ),
-              ]),
-            ))
+                  ]),
+                )))
       ],
     );
 
@@ -91,7 +92,7 @@ class Banner_NewsWidget extends StatelessWidget {
             child: Align(
               alignment: Alignment.centerLeft,
               child: Padding(
-                  padding: EdgeInsets.only(left: 15.0,top: 5.0,bottom: 5.0),
+                  padding: EdgeInsets.only(left: 15.0, top: 5.0, bottom: 5.0),
                   child: Container(
                       decoration: underLineBoxDecoration(),
                       child: Text('$title',
@@ -99,18 +100,16 @@ class Banner_NewsWidget extends StatelessWidget {
                               color: Colors.black,
                               fontWeight: FontWeight.bold,
                               fontSize: 16.0)))),
-            )
-        )
-        ,
+            )),
         Align(
           alignment: Alignment.centerRight,
           child: Padding(
-              padding: EdgeInsets.only(left: 15.0,top: 5.0,bottom: 5.0,right: 5.0),
-              child: Container(
-                  child: Icon(Icons.arrow_right)
-              )),
+              padding: EdgeInsets.only(
+                  left: 15.0, top: 5.0, bottom: 5.0, right: 5.0),
+              child: Container(child: Icon(Icons.arrow_right))),
         )
-      ],);
+      ],
+    );
   }
 
   underLineBoxDecoration() {
@@ -118,5 +117,9 @@ class Banner_NewsWidget extends StatelessWidget {
         border: Border(bottom: BorderSide(color: Colors.red, width: 1.0)));
   }
 
-
+  detailsScreen(BuildContext context) {
+    Navigator.of(context).push(MaterialPageRoute(
+        builder: (context) => DetailsPageWidget(
+            context: context, viewModel: mainPageVM, data: data)));
+  }
 }

@@ -1,17 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:zeenews/services/ZeeAPIService.dart';
-import 'package:zeenews/utils/Types.dart';
 import 'package:zeenews/models/HomeReponseData.dart';
-import 'package:zeenews/utils/Utils.dart';
 import 'package:scoped_model/scoped_model.dart';
 import 'package:zeenews/view_models/MainPageViewModel.dart';
-import 'package:zeenews/views/widgets/Banner_NewsListWidget.dart';
-import 'package:zeenews/views/widgets/BlogWidget.dart';
-import 'package:zeenews/views/widgets/ChipWidget.dart';
-import 'package:zeenews/views/widgets/GalleryWidget.dart';
 import 'package:zeenews/views/widgets/InternetConnection.dart';
-import 'package:zeenews/views/widgets/LogoWidget.dart';
-import 'package:zeenews/views/widgets/NewsListWidget.dart';
 import 'package:zeenews/views/widgets/PageWidget.dart';
 
 class HomeScreen extends StatelessWidget {

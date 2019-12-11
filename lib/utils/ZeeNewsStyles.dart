@@ -19,24 +19,38 @@ class CustomColors {
   static const ChipBackgroundColor =  Color(0xFFE1E4F3);
 }
 class Configuration {
-  static const String BASE_URL_TEMPORARY = "https://swapi.co/api";
 
-
+  //BASE URL
   static const String BASE_URL = "https://stage2.zeenews.com/pwaapi";
- // static const String BASE_URL = "https://zeenews.india.com/pwaapi";
 
-  //sectionlist for menu
+  static const String LANG_BASE_URL = "https://zeenews.india.com/pwaapi";
+
+
+  //Dynamic Section Menu
   static const String SECTION_LIST_URL =BASE_URL+"/sectionlist.php";
-  static const String HOME_SECTION_URL =BASE_URL+"/home.php";
+
+  //Language API
   static const String LANGUAGE_MENU_URL =BASE_URL+"/languagemeu.php";
 
+  //Sections API
+  static const String HOME_SECTION_URL =BASE_URL+"/home.php";
+  static const String LIVE_SECTION_URL =BASE_URL+"/livetv.php";
+  static const String PHOTOS_SECTION_URL =BASE_URL+"/photolist.php";
+  static const String VIDEOS_SECTION_URL =BASE_URL+"/videolist.php";
+
+
+  //WEB API
   static const String CONTACT_URL =BASE_URL+"/contact.php";
   static const String DISCLAIMER_URL =BASE_URL+"/disclaimer.php";
   static const String PRIVACY_URL =BASE_URL+"/privacy.php";
 
 
+  //Article Detail API
+  static const String DETAILS_VIEW_URL =BASE_URL+"/newsdetail.php?newsid=";
 
 
+
+  //Static Image Url
   static const String SAMPLE_IMAGE_URL ="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/TearsOfSteel.jpg";
 }
 class CustomFontStyle {

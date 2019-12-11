@@ -1,12 +1,15 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:http/http.dart';
 import 'package:scoped_model/scoped_model.dart';
 import 'package:zeenews/AppLocalizations.dart';
 import 'package:zeenews/models/LanguageResponseData.dart';
 import 'package:zeenews/models/SectionResponseData.dart';
+import 'package:zeenews/utils/LocalStorageService.dart';
 import 'package:zeenews/utils/ZeeNewsStyles.dart';
 import 'package:zeenews/view_models/MainPageViewModel.dart';
+import 'package:zeenews/views/pages/HomePage.dart';
 import 'package:zeenews/views/pages/SectionListPage.dart';
 import 'package:zeenews/views/pages/WebView.dart';
 import 'package:zeenews/views/widgets/InternetConnection.dart';
@@ -31,11 +34,8 @@ class Hamburger extends StatefulWidget {
 }
 
 class HamburgerState extends State<Hamburger> {
-
-
   @override
   Widget build(BuildContext context) {
-
     final List<String> getSetting = [
       Translations.of(context).text("contact"),
       Translations.of(context).text("privacy"),
@@ -246,24 +246,26 @@ class HamburgerState extends State<Hamburger> {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            GestureDetector(
-                onTap: () {
-                  loadHomePage();
-                },
-                child: Container(
-                  padding: EdgeInsets.all(1.0),
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(15.0)),
-                      border: Border.all(
-                        color: Colors.grey,
-                        width: 1,
-                      )),
+            Container(
+              padding: EdgeInsets.all(1.0),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                  border: Border.all(
+                    color: Colors.grey,
+                    width: 1,
+                  )),
+              child: GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      loadHomePage();
+                    });
+                  },
                   child: Image.network(
                     languageData.thumbnailUrl,
                     height: 50,
                     fit: BoxFit.contain,
-                  ),
-                ))
+                  )),
+            )
           ],
         ));
   }
@@ -296,8 +298,7 @@ class HamburgerState extends State<Hamburger> {
 
   void loadHomePage() async {
     Navigator.pop(context);
-    // widget.tabController.animateTo(0);
-    await widget.viewModel
-        .setHomePageSections("https://zeenews.india.com/hindi/pwaapi/home.php");
+    applic.onLocaleChanged(new Locale('hi', ''));
+    await widget.viewModel.setHomePageSections("https://zeenews.india.com/hindi/pwaapi/home.php");
   }
 }

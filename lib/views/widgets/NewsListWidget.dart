@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:zeenews/models/HomeReponseData.dart';
 import 'package:zeenews/utils/ZeeNewsStyles.dart';
+import 'package:zeenews/views/pages/DetailsPageWidget.dart';
+
+import '../../main.dart';
 
 class NewsWidget extends StatefulWidget {
   final Item data;
@@ -41,7 +44,10 @@ class _NewsWidgetState extends State<NewsWidget> {
             padding:
                 EdgeInsets.only(left: 10.0, right: 10.0, top: 4.0, bottom: 4.0),
             color: Colors.white,
-            child: Card(
+            child:GestureDetector(onTap: (){
+              Navigator.of(context).push(MaterialPageRoute( builder: (context) => DetailsPageWidget(context:context,viewModel: mainPageVM,data: widget.data)));
+            },child:
+            Card(
               elevation: 3.0,
               child: Row(children: <Widget>[
                 Expanded(
@@ -69,7 +75,7 @@ class _NewsWidgetState extends State<NewsWidget> {
 
                 ),
               ]),
-            ))
+            )))
       ],
     );
     return sectionMenuWidget;

@@ -22,8 +22,8 @@ class ListviewWidget extends StatelessWidget {
   Widget build(BuildContext context) {
 
     var title =Text(
-    //  language.regTitle.toString(),
-      language.title,
+      language.regTitle.toString(),
+
       maxLines: 1,
       textAlign: TextAlign.center,
       style: TextStyle(
@@ -63,8 +63,8 @@ class ListviewWidget extends StatelessWidget {
   }
   void loadHomePage() async{
     if(language.title=="Hindi"){
+      applic.onLocaleChanged(new Locale('hi',''));
       await viewModel.setHomePageSections("https://zeenews.india.com/hindi/pwaapi/home.php");
-
       await viewModel.setSectionList();
       _makeGetRequest();
     }
@@ -83,25 +83,27 @@ class ListviewWidget extends StatelessWidget {
       });
     }
 
-    Response response = await get("http://demo5682977.mockable.io/https://zeenews.india.com/hindi/pwaapi/sectionlists");
+   // Map userHeader = {"Content-type": "application/json"};
+
+    Response response = await get("https://zeenews.india.com/hindi/pwaapi/sectionlist.php");
 
     if (response != null) {
       // sample info available in response
       int statusCode = response.statusCode;
+
+      String jsondata = response.body.trim();
       Map<String, String> headers = response.headers;
-      String contentType = headers['content-type'];
-      String jsondata = response.body;
+
+
       print("SPlash:::::" + jsondata.toString());
       // TODO convert json to object...
       final jsonResponse = json.decode(jsondata);
 
+
      SectionResponseData section = new SectionResponseData.fromMap(jsonResponse);
 
       if (section != null) {
-        Route route = MaterialPageRoute(
-            builder: (context) => MainPage(
-                viewModel: viewModel, list: tempList, section: section));
-        applic.onLocaleChanged(new Locale('hi',''));
+        Route route = MaterialPageRoute(builder: (context) => MainPage(viewModel: viewModel, list: tempList, section: section));
         Navigator.pushReplacement(context, route);
       }
     }

@@ -2,13 +2,13 @@ import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
 import 'package:share/share.dart';
+import 'package:zeenews/models/DetailResponseData.dart';
 
 class Utils {
-  static void share(BuildContext context, String item) {
+  static void share(BuildContext context, DetailResponseData item) {
     final RenderBox box = context.findRenderObject();
-    Share.share(item,
-        subject:
-            "The Smoking Tire heads out to Adams Motorsports Park in Riverside, CA to test the most requested car of 2010, the Volkswagen GTI. Will it beat the Mazdaspeed3's standard-setting lap time? Watch and see...",
+    Share.share(item.newsdetail.thumbnailUrl!=null?item.newsdetail.thumbnailUrl:"",
+        subject:item.newsdetail.title!=null?item.newsdetail.title:"",
         sharePositionOrigin: box.localToGlobal(Offset.zero) & box.size);
   }
 
