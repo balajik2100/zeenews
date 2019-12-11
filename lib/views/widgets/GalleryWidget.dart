@@ -2,6 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:zeenews/models/HomeReponseData.dart';
 import 'package:zeenews/utils/ZeeNewsStyles.dart';
+import 'package:zeenews/views/pages/DetailsPageWidget.dart';
+
+import '../../main.dart';
 
 class GalleryWidget extends StatelessWidget {
   final Item data;
@@ -25,7 +28,7 @@ class GalleryWidget extends StatelessWidget {
         width: 200.0,
         margin: EdgeInsets.only(left: 10.0, right: 10.0),
         decoration: roundedCornerDecoration(),
-        child: Padding(
+        child:GestureDetector(onTap: (){ Navigator.of(context).push(MaterialPageRoute( builder: (context) => DetailsPageWidget(context:context,viewModel: mainPageVM,data: data)));},child:  Padding(
             padding: EdgeInsets.only(bottom: 2.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -61,7 +64,7 @@ class GalleryWidget extends StatelessWidget {
                     alignment: Alignment.center,
                     child: title)
               ],
-            )));
+            ))));
 
     return verticallist;
   }

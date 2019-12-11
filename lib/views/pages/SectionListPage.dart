@@ -41,7 +41,8 @@ class _SectionItemState extends State<SectionList> {
         appBar: AppBar(
           title: Text(widget.title),
         ),
-        body: ScopedModelDescendant<MainPageViewModel>(
+        body:
+        ScopedModelDescendant<MainPageViewModel>(
           builder: (_, __, model) {
             return FutureBuilder<List<BaseSection>>(
                 future: model.homepage,

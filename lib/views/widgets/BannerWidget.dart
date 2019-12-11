@@ -1,6 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:zeenews/models/HomeReponseData.dart';
+import 'package:zeenews/views/pages/DetailsPageWidget.dart';
+
+import '../../main.dart';
 
 class BannerWidget extends StatelessWidget {
   final Item data;
@@ -23,22 +26,30 @@ class BannerWidget extends StatelessWidget {
                   color: Colors.grey //                   <--- border width here
                   ),
             ),
-            child: Stack(
-              children: <Widget>[
-                Image.network(data.thumbnailUrl,
-                    height: 160.0, width: size.width, fit: BoxFit.fill),
-                Container(
-                  padding: EdgeInsets.only(top: 100.0),
-                  child: Center(
-                      child: Text(data.title,
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 14.0,
-                              fontWeight: FontWeight.bold))),
-                )
-              ],
-            )),
+            child: GestureDetector(
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => DetailsPageWidget(
+                          context: context,
+                          viewModel: mainPageVM,
+                          data: data)));
+                },
+                child: Stack(
+                  children: <Widget>[
+                    Image.network(data.thumbnailUrl,
+                        height: 160.0, width: size.width, fit: BoxFit.fill),
+                    Container(
+                      padding: EdgeInsets.only(top: 100.0),
+                      child: Center(
+                          child: Text(data.title,
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 14.0,
+                                  fontWeight: FontWeight.bold))),
+                    )
+                  ],
+                ))),
       ],
     );
     // TODO: implement build

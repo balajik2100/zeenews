@@ -1,11 +1,11 @@
-
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:zeenews/models/HomeReponseData.dart';
+import 'package:zeenews/views/pages/DetailsPageWidget.dart';
+
+import '../../main.dart';
 
 class LiveWidget extends StatelessWidget {
-
   final Item data;
   final int index;
 
@@ -17,8 +17,7 @@ class LiveWidget extends StatelessWidget {
         height: 100.0,
         width: 160,
         color: Colors.white,
-        child:
-        Padding(
+        child: Padding(
             padding: EdgeInsets.all(3.0),
             child: Column(
               mainAxisSize: MainAxisSize.min,
@@ -31,11 +30,19 @@ class LiveWidget extends StatelessWidget {
                         color: Colors.grey,
                         width: 1,
                       )),
-                  child: Image.network(
-                    data.thumbnailUrl,
-                    height: 60,
-                    fit: BoxFit.contain,
-                  ),
+                  child: GestureDetector(
+                      onTap: () {
+                        /*Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => DetailsPageWidget(
+                                context: context,
+                                viewModel: mainPageVM,
+                                data: data)));*/
+                      },
+                      child: Image.network(
+                        data.thumbnailUrl,
+                        height: 60,
+                        fit: BoxFit.contain,
+                      )),
                 )
               ],
             )));

@@ -82,7 +82,7 @@ class _VideoplayerState extends State<Videoplayer> {
                       )),
                   GestureDetector(
                       onTap: () {
-                        Utils.share(context, item);
+                   //     Utils.share(context, item);
                       },
                       child: Align(
                         alignment: Alignment.topRight,

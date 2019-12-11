@@ -25,7 +25,7 @@ class BlogWidget extends StatelessWidget {
     return Container(
         padding: EdgeInsets.all(5.0),
         margin: EdgeInsets.only(left: 5.0, right: 5.0),
-        child: Stack(
+        child:GestureDetector(onTap: (){},child:  Stack(
           overflow: Overflow.visible,
           children: [
             Positioned(
@@ -58,6 +58,6 @@ class BlogWidget extends StatelessWidget {
               ],
             )
           ],
-        ));
+        )));
   }
 }

@@ -7,6 +7,13 @@ class Types {
   static const String LIVE ="live";
   static const String BLOG ="blog";
   static const String CHIPVIEW ="chip";
+  static const String BREAKINGNEWS ="breaking";
+  static const String SCORECARD ="scorecard";
+
+
+
+
+  static const String A ="a";
 
 
 }

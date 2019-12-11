@@ -59,7 +59,7 @@ class _AddTabItemState extends State<AddTabItem> {
   headerSection() {
     return Container(
       padding: EdgeInsets.only(top: 30, left: 10, right: 10),
-      alignment: Alignment.center,
+        alignment: Alignment.center,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[

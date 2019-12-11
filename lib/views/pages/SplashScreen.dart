@@ -179,7 +179,8 @@ class SplashState extends State<Splash> {
         .getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
     print("======>>>>");
     print(position);
-    _getPlace(position);
+    if(position!=null)
+      _getPlace(position);
   }
   String _address = ""; // create this variable
 
