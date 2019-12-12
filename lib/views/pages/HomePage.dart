@@ -47,6 +47,7 @@ class _MainPageState extends State<MainPage>
   Future loadData() async {
     await widget.viewModel.setHomePageSections("");
     await widget.viewModel.setLanguageMenu();
+    await widget.viewModel.setPhotosPageSection("");
     await widget.viewModel.setVideoPageSection("");
   }
 

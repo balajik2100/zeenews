@@ -13,7 +13,8 @@ class Types {
 
 
 
-  static const String A ="a";
+  static const String PHOTOS_SECTION ="photogallery";
+  static const String PHOTOS_ENTERTAINMENT ="photosenter";
 
 
 }

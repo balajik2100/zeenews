@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/ravi/Documents/zee/z5x/zeenews/build/google_api_availability/intermediates/res/merged/release/layout-v21/notification_template_custom_big.xml",
+        "source": "/Users/ravi/.gradle/caches/transforms-2/files-2.1/955e016b888fc2dde2d04935bbc100d6/core-1.0.0/res/layout-v21/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/Users/ravi/Documents/zee/z5x/zeenews/build/google_api_availability/intermediates/res/merged/release/layout-v21/notification_action_tombstone.xml",
+        "source": "/Users/ravi/.gradle/caches/transforms-2/files-2.1/955e016b888fc2dde2d04935bbc100d6/core-1.0.0/res/layout-v21/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/Users/ravi/Documents/zee/z5x/zeenews/build/google_api_availability/intermediates/res/merged/release/layout-v21/notification_template_icon_group.xml",
+        "source": "/Users/ravi/.gradle/caches/transforms-2/files-2.1/955e016b888fc2dde2d04935bbc100d6/core-1.0.0/res/layout-v21/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/Users/ravi/Documents/zee/z5x/zeenews/build/google_api_availability/intermediates/res/merged/release/layout-v21/notification_action.xml",
+        "source": "/Users/ravi/.gradle/caches/transforms-2/files-2.1/955e016b888fc2dde2d04935bbc100d6/core-1.0.0/res/layout-v21/notification_action.xml"
+    }
+]

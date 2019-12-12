@@ -6,6 +6,7 @@ import 'package:zeenews/models/DetailResponseData.dart';
 import 'package:zeenews/models/LanguageResponseData.dart';
 import 'package:zeenews/models/LiveResponseData.dart';
 import 'package:zeenews/models/PhotoResponseData.dart';
+import 'package:zeenews/models/PhotoResponseData.dart' as prefix0;
 import 'package:zeenews/models/VideoResponseData.dart';
 import 'package:zeenews/utils/Types.dart';
 import 'package:zeenews/models/HomeReponseData.dart';
@@ -17,8 +18,10 @@ class ZeeAPIService implements ZeeNewsAPIInterface {
   final ZEE_BASE_URL = Configuration.BASE_URL;
 
   http.Client _client = http.Client();
+
   set client(http.Client value) => _client = value;
   static final ZeeAPIService _internal = ZeeAPIService.internal();
+
   factory ZeeAPIService() => _internal;
 
   ZeeAPIService.internal();
@@ -73,13 +76,15 @@ class ZeeAPIService implements ZeeNewsAPIInterface {
           BaseSection s =
               new BaseSection(key, Types.PHOTO_GALLERY, "", data: list);
           sectionData.add(s);
-        } /*else if (key == "videos") {
+        }
+        /*else if (key == "videos") {
           List<Item> indialist =
               (map[key] as List<dynamic>).map((v) => Item.fromJson(v)).toList();
           BaseSection s =
               new BaseSection(key, Types.VIDEOS, "", data: indialist);
           sectionData.add(s);
-        }*/ else if (key == "business" ||
+        }*/
+        else if (key == "business" ||
             key == "sports" ||
             key == "entertainment" ||
             key == "india" ||
@@ -139,6 +144,7 @@ class ZeeAPIService implements ZeeNewsAPIInterface {
       throw Exception('Failed to get home section data');
     }
   }
+
   //Language Menu
   @override
   Future<List<Langauages>> getLanguageMenu() async {
@@ -148,8 +154,7 @@ class ZeeAPIService implements ZeeNewsAPIInterface {
       var data = json.decode(response.body);
       List<dynamic> languageData = data["langauages"];
 
-      List<Langauages> langList =
-          languageData.map((p) => Langauages.fromJson(p)).toList();
+      List<Langauages> langList = languageData.map((p) => Langauages.fromJson(p)).toList();
       print("langauages:" + langList.toString());
       return langList;
     } else {
@@ -192,7 +197,7 @@ class ZeeAPIService implements ZeeNewsAPIInterface {
       PhotoResponseData details = PhotoResponseData.fromJson(data);
       return details;
     } else {
-      throw Exception("Failed to get photos data");
+      throw Exception("Failed to get video data");
     }
   }
 
@@ -208,6 +213,4 @@ class ZeeAPIService implements ZeeNewsAPIInterface {
       throw Exception("Failed to get video data");
     }
   }
-
-
 }

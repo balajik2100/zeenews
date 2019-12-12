@@ -1,0 +1,125 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.z5x.zeenews"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+9        android:targetSdkVersion="28" />
+10    <!--
+11         Flutter needs it to communicate with the running application
+12         to allow setting breakpoints, to provide hot reload, etc.
+13    -->
+14    <uses-permission android:name="android.permission.INTERNET" />
+14-->/Users/ravi/Documents/zee/z5x/zeenews/android/app/src/main/AndroidManifest.xml:5:5-66
+14-->/Users/ravi/Documents/zee/z5x/zeenews/android/app/src/main/AndroidManifest.xml:5:22-64
+15    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+15-->/Users/ravi/Documents/zee/z5x/zeenews/android/app/src/main/AndroidManifest.xml:6:5-77
+15-->/Users/ravi/Documents/zee/z5x/zeenews/android/app/src/main/AndroidManifest.xml:6:22-74
+16    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+16-->/Users/ravi/Documents/zee/z5x/zeenews/android/app/src/main/AndroidManifest.xml:7:5-80
+16-->/Users/ravi/Documents/zee/z5x/zeenews/android/app/src/main/AndroidManifest.xml:7:22-78
+17    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+17-->/Users/ravi/Documents/zee/z5x/zeenews/android/app/src/main/AndroidManifest.xml:8:5-78
+17-->/Users/ravi/Documents/zee/z5x/zeenews/android/app/src/main/AndroidManifest.xml:8:22-76
+18    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+18-->[:connectivity] /Users/ravi/Documents/zee/z5x/zeenews/build/connectivity/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-79
+18-->[:connectivity] /Users/ravi/Documents/zee/z5x/zeenews/build/connectivity/intermediates/library_manifest/debug/AndroidManifest.xml:7:22-76
+19    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+19-->[:connectivity] /Users/ravi/Documents/zee/z5x/zeenews/build/connectivity/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-76
+19-->[:connectivity] /Users/ravi/Documents/zee/z5x/zeenews/build/connectivity/intermediates/library_manifest/debug/AndroidManifest.xml:8:22-73
+20    <!--
+21 io.flutter.app.FlutterApplication is an android.app.Application that
+22         calls FlutterMain.startInitialization(this); in its onCreate method.
+23         In most cases you can leave this as-is, but you if you want to provide
+24         additional functionality it is fine to subclass or reimplement
+25         FlutterApplication and put your custom class here.
+26    -->
+27    <application
+27-->/Users/ravi/Documents/zee/z5x/zeenews/android/app/src/main/AndroidManifest.xml:14:5-38:19
+28        android:name="io.flutter.app.FlutterApplication"
+28-->/Users/ravi/Documents/zee/z5x/zeenews/android/app/src/main/AndroidManifest.xml:15:9-57
+29        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+29-->[androidx.core:core:1.1.0] /Users/ravi/.gradle/caches/transforms-2/files-2.1/397f55e652ab2d8b6ad269620ac1e6a0/core-1.1.0/AndroidManifest.xml:24:18-86
+30        android:debuggable="true"
+31        android:icon="@mipmap/ic_launcher"
+31-->/Users/ravi/Documents/zee/z5x/zeenews/android/app/src/main/AndroidManifest.xml:17:9-43
+32        android:label="zeenews"
+32-->/Users/ravi/Documents/zee/z5x/zeenews/android/app/src/main/AndroidManifest.xml:16:9-32
+33        android:usesCleartextTraffic="true" >
+33-->/Users/ravi/Documents/zee/z5x/zeenews/android/app/src/main/AndroidManifest.xml:18:9-44
+34        <activity
+34-->/Users/ravi/Documents/zee/z5x/zeenews/android/app/src/main/AndroidManifest.xml:20:9-37:20
+35            android:name="com.z5x.zeenews.MainActivity"
+35-->/Users/ravi/Documents/zee/z5x/zeenews/android/app/src/main/AndroidManifest.xml:21:13-41
+36            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+36-->/Users/ravi/Documents/zee/z5x/zeenews/android/app/src/main/AndroidManifest.xml:24:13-144
+37            android:launchMode="singleTop"
+37-->/Users/ravi/Documents/zee/z5x/zeenews/android/app/src/main/AndroidManifest.xml:22:13-43
+38            android:theme="@style/LaunchTheme"
+38-->/Users/ravi/Documents/zee/z5x/zeenews/android/app/src/main/AndroidManifest.xml:23:13-47
+39            android:windowSoftInputMode="adjustResize" >
+39-->/Users/ravi/Documents/zee/z5x/zeenews/android/app/src/main/AndroidManifest.xml:25:13-55
+40
+41            <!--
+42                 This keeps the window background of the activity showing
+43                 until Flutter renders its first frame. It can be removed if
+44                 there is no splash screen (such as the default splash screen
+45                 defined in @style/LaunchTheme).
+46            -->
+47            <meta-data
+47-->/Users/ravi/Documents/zee/z5x/zeenews/android/app/src/main/AndroidManifest.xml:30:13-32:40
+48                android:name="io.flutter.app.android.SplashScreenUntilFirstFrame"
+48-->/Users/ravi/Documents/zee/z5x/zeenews/android/app/src/main/AndroidManifest.xml:31:17-82
+49                android:value="true" />
+49-->/Users/ravi/Documents/zee/z5x/zeenews/android/app/src/main/AndroidManifest.xml:32:17-37
+50
+51            <intent-filter>
+51-->/Users/ravi/Documents/zee/z5x/zeenews/android/app/src/main/AndroidManifest.xml:33:13-36:29
+52                <action android:name="android.intent.action.MAIN" />
+52-->/Users/ravi/Documents/zee/z5x/zeenews/android/app/src/main/AndroidManifest.xml:34:17-68
+52-->/Users/ravi/Documents/zee/z5x/zeenews/android/app/src/main/AndroidManifest.xml:34:25-66
+53
+54                <category android:name="android.intent.category.LAUNCHER" />
+54-->/Users/ravi/Documents/zee/z5x/zeenews/android/app/src/main/AndroidManifest.xml:35:17-76
+54-->/Users/ravi/Documents/zee/z5x/zeenews/android/app/src/main/AndroidManifest.xml:35:27-74
+55            </intent-filter>
+56        </activity>
+57
+58        <provider
+58-->[:flutter_webview_plugin] /Users/ravi/Documents/zee/z5x/zeenews/build/flutter_webview_plugin/intermediates/library_manifest/debug/AndroidManifest.xml:9:9-18:20
+59            android:name="androidx.core.content.FileProvider"
+59-->[:flutter_webview_plugin] /Users/ravi/Documents/zee/z5x/zeenews/build/flutter_webview_plugin/intermediates/library_manifest/debug/AndroidManifest.xml:10:13-62
+60            android:authorities="com.z5x.zeenews.fileprovider"
+60-->[:flutter_webview_plugin] /Users/ravi/Documents/zee/z5x/zeenews/build/flutter_webview_plugin/intermediates/library_manifest/debug/AndroidManifest.xml:11:13-64
+61            android:exported="false"
+61-->[:flutter_webview_plugin] /Users/ravi/Documents/zee/z5x/zeenews/build/flutter_webview_plugin/intermediates/library_manifest/debug/AndroidManifest.xml:12:13-37
+62            android:grantUriPermissions="true" >
+62-->[:flutter_webview_plugin] /Users/ravi/Documents/zee/z5x/zeenews/build/flutter_webview_plugin/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-47
+63            <meta-data
+63-->[:flutter_webview_plugin] /Users/ravi/Documents/zee/z5x/zeenews/build/flutter_webview_plugin/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-17:53
+64                android:name="android.support.FILE_PROVIDER_PATHS"
+64-->[:flutter_webview_plugin] /Users/ravi/Documents/zee/z5x/zeenews/build/flutter_webview_plugin/intermediates/library_manifest/debug/AndroidManifest.xml:16:17-67
+65                android:resource="@xml/filepaths" />
+65-->[:flutter_webview_plugin] /Users/ravi/Documents/zee/z5x/zeenews/build/flutter_webview_plugin/intermediates/library_manifest/debug/AndroidManifest.xml:17:17-50
+66        </provider>
+67
+68        <activity
+68-->[com.google.android.gms:play-services-base:16.0.1] /Users/ravi/.gradle/caches/transforms-2/files-2.1/c6a02407a0d703c14b3ef947da013b18/jetified-play-services-base-16.0.1/AndroidManifest.xml:23:9-26:75
+69            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+69-->[com.google.android.gms:play-services-base:16.0.1] /Users/ravi/.gradle/caches/transforms-2/files-2.1/c6a02407a0d703c14b3ef947da013b18/jetified-play-services-base-16.0.1/AndroidManifest.xml:24:13-79
+70            android:exported="false"
+70-->[com.google.android.gms:play-services-base:16.0.1] /Users/ravi/.gradle/caches/transforms-2/files-2.1/c6a02407a0d703c14b3ef947da013b18/jetified-play-services-base-16.0.1/AndroidManifest.xml:25:13-37
+71            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+71-->[com.google.android.gms:play-services-base:16.0.1] /Users/ravi/.gradle/caches/transforms-2/files-2.1/c6a02407a0d703c14b3ef947da013b18/jetified-play-services-base-16.0.1/AndroidManifest.xml:26:13-72
+72
+73        <meta-data
+73-->[com.google.android.gms:play-services-basement:16.0.1] /Users/ravi/.gradle/caches/transforms-2/files-2.1/14dcc649b653594032e99acab8f01a2d/jetified-play-services-basement-16.0.1/AndroidManifest.xml:23:9-25:69
+74            android:name="com.google.android.gms.version"
+74-->[com.google.android.gms:play-services-basement:16.0.1] /Users/ravi/.gradle/caches/transforms-2/files-2.1/14dcc649b653594032e99acab8f01a2d/jetified-play-services-basement-16.0.1/AndroidManifest.xml:24:13-58
+75            android:value="@integer/google_play_services_version" />
+75-->[com.google.android.gms:play-services-basement:16.0.1] /Users/ravi/.gradle/caches/transforms-2/files-2.1/14dcc649b653594032e99acab8f01a2d/jetified-play-services-basement-16.0.1/AndroidManifest.xml:25:13-66
+76    </application>
+77
+78</manifest>
