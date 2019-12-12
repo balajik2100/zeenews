@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:zeenews/models/HomeReponseData.dart';
-import 'package:zeenews/services/ZeeAPIService.dart';
+import 'package:zeenews/models/PhotoResponseData.dart';
+import 'package:zeenews/models/VideoResponseData.dart';
 import 'package:zeenews/utils/Types.dart';
 import 'package:zeenews/utils/Utils.dart';
 import 'package:zeenews/views/widgets/Banner_NewsListWidget.dart';
@@ -10,12 +11,14 @@ import 'package:zeenews/views/widgets/ChipWidget.dart';
 import 'package:zeenews/views/widgets/GalleryWidget.dart';
 import 'package:zeenews/views/widgets/LogoWidget.dart';
 import 'package:zeenews/views/widgets/NewsListWidget.dart';
-import 'package:zeenews/views/widgets/ScoreCardWidget.dart';
 
 // ignore: must_be_immutable
-class CommonPageWidget extends StatefulWidget{
-  List<BaseSection> homeData;
-  CommonPageWidget({@required this.homeData});
+class CommonPageWidget extends StatefulWidget {
+  PhotoResponseData photo;
+  VideoResponseData video;
+  String type;
+
+  CommonPageWidget({@required this.photo,@required this.video,@required this.type});
 
   @override
   State<StatefulWidget> createState() {
@@ -25,17 +28,14 @@ class CommonPageWidget extends StatefulWidget{
 }
 
 class _CommonPageWidgetState extends State<CommonPageWidget> {
-
-
   ScrollController _scrollController;
   double _scrollPosition;
 
-  _scrollListener(){
+  _scrollListener() {
     setState(() {
       _scrollPosition = _scrollController.position.pixels;
     });
   }
-
 
   @override
   void initState() {
@@ -46,277 +46,35 @@ class _CommonPageWidgetState extends State<CommonPageWidget> {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return SectionPage(context, widget.homeData);
+    return SectionPage(context,widget.type, photoData:widget.photo);
   }
 
   // ignore: non_constant_identifier_names
-  Widget SectionPage(BuildContext context, List<BaseSection> homeData) {
-    return ListView.builder(
-        // ignore: missing_return
-        controller: _scrollController,
-        itemBuilder: (context, index) {
-          if (homeData[index].type == Types.BREAKINGNEWS) {
-            List<Item> item = homeData[index].data;
-            String title = Utils.upperCase((homeData[index]).title);
-            return Container(
-                child: Padding(
-                    padding: EdgeInsets.symmetric(vertical: 14.0),
-                    child: Row(
-                      children: <Widget>[
-                        Expanded(
-                            flex: 4,
-                            child: Align(
-                              alignment: Alignment.centerLeft,
-                              child: Padding(
-                                  padding: EdgeInsets.only(
-                                      left: 15.0, top: 5.0, bottom: 5.0),
-                                  child: Container(
-                                      decoration: underLineBoxDecoration(),
-                                      child: Text('$title',
-                                          style: TextStyle(
-                                              color: Colors.black,
-                                              fontWeight: FontWeight.bold,
-                                              fontSize: 16.0)))),
-                            )),
-                        Expanded(
-                          flex: 6,
-                          child: new Container(
-                            height: 60.0,
-                            child: ListView.builder(
-                              itemBuilder: (context, index) {
-                                return BreakingWidget(
-                                    data: item[index], index: index);
-                              },
-                              scrollDirection: Axis.horizontal,
-                              itemCount: item.length,
-                              shrinkWrap: false,
-                              // todo comment this out and check the result
-                              physics: ClampingScrollPhysics(), // todo comment this out and check the result
-                            ),
-                          ),
-                        ),
-                      ],
-                    )));
-          }
-          else if (homeData[index].type == Types.SCORECARD) {
-            List<ScoreCard> item = homeData[index].match;
-            String title = Utils.upperCase((homeData[index]).title);
-            return Container(
-                color: Colors.black,
-                child: Padding(
-                    padding: EdgeInsets.symmetric(vertical: 14.0),
-                    child: Column(
-                      children: <Widget>[
-                        getTitleWidget(title, false),
-                        new Container(
-                          height: 140.0,
-                          child: ListView.builder(
-                            itemBuilder: (context, index) {
-                              return ScoreCardWidget(
-                                  data: item[index], index: index);
-                            },
-                            scrollDirection: Axis.horizontal,
-                            itemCount: item.length,
-                            shrinkWrap: false,
-                            // todo comment this out and check the result
-                            physics:
-                                ClampingScrollPhysics(), // todo comment this out and check the result
-                          ),
-                        ),
-                      ],
-                    )));
-          }
-          else if (homeData[index].type == Types.NEWS) {
-            List<Item> item = homeData[index].data;
-            String title = "";
-            if ((homeData[index]).title.contains("regional-langauge")) {
-              title = Utils.upperCase((homeData[index]).name);
-            } else {
-              title = Utils.upperCase((homeData[index]).title);
-            }
-            if (title == "TOP NEWS") {
-              return Padding(
-                padding: EdgeInsets.symmetric(vertical: 16.0),
-                child: Column(
-                  children: <Widget>[
-                    ListView.builder(
-                      itemBuilder: (context, index) {
-                        return Banner_NewsWidget(
-                            data: item[index],
-                            index: index,
-                            sectiontitle: title);
-                      },
-                      itemCount: item.length,
-                      shrinkWrap: true,
-                      // todo comment this out and check the result
-                      physics:
-                          ClampingScrollPhysics(), // todo comment this out and check the result
-                    ),
-                  ],
-                ),
-              );
-            } else {
-              return Padding(
-                padding: EdgeInsets.symmetric(vertical: 16.0),
-                child: Column(
-                  children: <Widget>[
-                    getTitleWidget(title, true),
-                    ListView.builder(
-                      itemBuilder: (context, index) {
-                        return NewsWidget(data: item[index], index: index);
-                      },
-                      itemCount: item.length,
-                      shrinkWrap: true,
-                      // todo comment this out and check the result
-                      physics:
-                          ClampingScrollPhysics(), // todo comment this out and check the result
-                    ),
-                  ],
-                ),
-              );
-            }
-          }
-          else if (homeData[index].type == Types.SECTION_MENU) {
-            List<Item> item = homeData[index].data;
-            String title = "";
-            if ((homeData[index]).title.contains("regional-langauge")) {
-              title = Utils.upperCase((homeData[index]).name);
-            } else {
-              title = Utils.upperCase((homeData[index]).title);
-            }
-            return Padding(
-              padding: EdgeInsets.symmetric(vertical: 16.0),
-              child: Column(
-                children: <Widget>[
-                  ListView.builder(
-                    itemBuilder: (context, index) {
-                      return Banner_NewsWidget(
-                          data: item[index], index: index, sectiontitle: title);
-                    },
-                    itemCount: item.length,
-                    shrinkWrap: true,
-                    // todo comment this out and check the result
-                    physics:
-                        ClampingScrollPhysics(), // todo comment this out and check the result
-                  ),
-                ],
-              ),
-            );
-          }
-          else if (homeData[index].type == Types.PHOTO_GALLERY ||
-              homeData[index].type == Types.VIDEOS) {
-            List<Item> item = homeData[index].data;
-            String title = Utils.upperCase((homeData[index]).title);
-            return Container(
-                color: Colors.black,
-                child: Padding(
-                    padding: EdgeInsets.symmetric(vertical: 14.0),
-                    child: Column(
-                      children: <Widget>[
-                        getTitleWidget(title, false),
-                        new Container(
-                          height: 180.0,
-                          child: ListView.builder(
-                            itemBuilder: (context, index) {
-                              return GalleryWidget(
-                                  data: item[index], index: index);
-                            },
-                            scrollDirection: Axis.horizontal,
-                            itemCount: item.length,
-                            shrinkWrap: false,
-                            // todo comment this out and check the result
-                            physics:
-                                ClampingScrollPhysics(), // todo comment this out and check the result
-                          ),
-                        ),
-                      ],
-                    )));
-          }
-          else if (homeData[index].type == Types.LIVE) {
-            List<Item> item = homeData[index].data;
-            String title = Utils.upperCase((homeData[index]).title);
-            return Container(
-                child: Padding(
-                    padding: EdgeInsets.symmetric(vertical: 14.0),
-                    child: Column(
-                      children: <Widget>[
-                        getTitleWidget(title, true),
-                        new Container(
-                          height: 80.0,
-                          child: ListView.builder(
-                            itemBuilder: (context, index) {
-                              return LiveWidget(
-                                  data: item[index], index: index);
-                            },
-                            scrollDirection: Axis.horizontal,
-                            itemCount: item.length,
-                            shrinkWrap: false,
-                            // todo comment this out and check the result
-                            physics:
-                                ClampingScrollPhysics(), // todo comment this out and check the result
-                          ),
-                        ),
-                      ],
-                    )));
-          }
-          else if (homeData[index].type == Types.BLOG) {
-            List<Item> item = homeData[index].data;
-            String title = Utils.upperCase((homeData[index]).title);
-            return Container(
-                color: Colors.black,
-                child: Padding(
-                    padding: EdgeInsets.symmetric(vertical: 14.0),
-                    child: Column(
-                      children: <Widget>[
-                        getTitleWidget(title, false),
-                        new Container(
-                          height: 120.0,
-                          child: ListView.builder(
-                            itemBuilder: (context, index) {
-                              return BlogWidget(
-                                  data: item[index], index: index);
-                            },
-                            scrollDirection: Axis.horizontal,
-                            itemCount: item.length,
-                            shrinkWrap: false,
-                            // todo comment this out and check the result
-                            physics:
-                                ClampingScrollPhysics(), // todo comment this out and check the result
-                          ),
-                        ),
-                      ],
-                    )));
-          }
-          else if (homeData[index].type == Types.CHIPVIEW) {
-            List<Item> item = homeData[index].data;
-            String title = Utils.upperCase((homeData[index]).title);
-            return Container(
-                color: Colors.black,
-                child: Padding(
-                    padding: EdgeInsets.symmetric(vertical: 14.0),
-                    child: Column(
-                      children: <Widget>[
-                        getTitleWidget(title, false),
-                        new Container(
-                          height: 60.0,
-                          child: ListView.builder(
-                            itemBuilder: (context, index) {
-                              return CustomChipWidget(data: item,type: "CHIP",
-                              );
-                            },
-                            scrollDirection: Axis.horizontal,
-                            itemCount: 1,
-                            shrinkWrap: false,
-                            // todo comment this out and check the result
-                            physics:
-                                ClampingScrollPhysics(), // todo comment this out and check the result
-                          ),
-                        ),
-                      ],
-                    )));
-          }
-        },
-        itemCount: homeData.length);
+  Widget SectionPage(BuildContext context, String type, {PhotoResponseData photoData}) {
+    if (photoData != null &&
+        photoData.news != null &&
+        photoData.news.length > 0) {
+
+      List<NewsDataItem> newsData = List();
+      if(photoData is PhotoResponseData)
+        newsData = photoData.news;
+
+
+      return ListView(
+        scrollDirection: Axis.vertical,
+        shrinkWrap: true,
+        children: <Widget>[
+          Container(child: getEntertainMent(newsData)),
+          Container(child: getSports(newsData)),
+          Container(child: getBusiness(newsData)),
+        ],
+      );
+    } else {
+      return Container(
+        child: Align(alignment: Alignment.center, child: Text("No Data")),
+      );
+    }
+
   }
 
   underLineBoxDecoration() {
@@ -346,9 +104,191 @@ class _CommonPageWidgetState extends State<CommonPageWidget> {
           child: Padding(
               padding: EdgeInsets.only(
                   left: 15.0, top: 5.0, bottom: 5.0, right: 5.0),
-              child: Container(child: Icon(Icons.arrow_right))),
+              child: Container(child: Icon(Icons.arrow_right,color: Colors.white,))),
         )
       ],
     );
   }
+
+  getEntertainMent(List<NewsDataItem> newsData) {
+    if (newsData[0].entertainment != null &&
+        newsData[0].entertainment.length > 0) {
+      if (newsData[0].entertainment[0].photos != null &&
+          newsData[0].entertainment[0].photos.length > 0) {
+        String title =Utils.upperCase(newsData[0].entertainment[0].name);
+        List<Item> sectionData = newsData[0].entertainment[0].photos;
+
+        return Container(
+            color: Colors.black,
+            child: Padding(
+                padding: EdgeInsets.symmetric(vertical: 14.0),
+                child: Column(
+                  children: <Widget>[
+                    getTitleWidget(title, false),
+                    new Container(
+                        height: 200,
+                        width:MediaQuery.of(context).size.width,
+                        child: ListView.builder(
+                          itemBuilder: (context, index) {
+                            return GalleryWidget(
+                                data: sectionData[index], index: index);
+                          },
+                          scrollDirection: Axis.horizontal,
+                          itemCount: sectionData.length,
+                          shrinkWrap: false,
+                          // todo comment this out and check the result
+                          physics:
+                              ClampingScrollPhysics(), // todo comment this out and check the result
+                        ))
+                  ],
+                )));
+      } else {
+        return Container();
+      }
+    } else {
+      return Container();
+    }
+  }
+
+  getSports(List<NewsDataItem> newsData) {
+    if (newsData[0].sports != null &&
+        newsData[0].sports.length > 0) {
+      if (newsData[0].sports[0].photos != null &&
+          newsData[0].sports[0].photos.length > 0) {
+        String title = Utils.upperCase(newsData[0].sports[0].name);
+        List<Item> sectionData = newsData[0].sports[0].photos;
+        return Container(
+            color: Colors.black,
+            child: Padding(
+                padding: EdgeInsets.symmetric(vertical: 14.0),
+                child: Column(
+                  children: <Widget>[
+                    getTitleWidget(title, false),
+                    new Container(
+                        height: 200,
+                        width:MediaQuery.of(context).size.width,
+                        child: ListView.builder(
+                          itemBuilder: (context, index) {
+                            return GalleryWidget(
+                                data: sectionData[index], index: index);
+                          },
+                          scrollDirection: Axis.horizontal,
+                          itemCount: sectionData.length,
+                          shrinkWrap: false,
+                          // todo comment this out and check the result
+                          physics:
+                          ClampingScrollPhysics(), // todo comment this out and check the result
+                        ))
+                  ],
+                )));
+      } else {
+        return Container();
+      }
+    } else {
+      return Container();
+    }
+  }
+
+  getBusiness(List<NewsDataItem> newsData) {
+    if (newsData[0].business != null &&
+        newsData[0].business.length > 0) {
+      if (newsData[0].business[0].photos != null &&
+          newsData[0].business[0].photos.length > 0) {
+        String title =Utils.upperCase(newsData[0].business[0].name);
+        List<Item> sectionData = newsData[0].business[0].photos;
+        return Container(
+            color: Colors.black,
+            child: Padding(
+                padding: EdgeInsets.symmetric(vertical: 14.0),
+                child: Column(
+                  children: <Widget>[
+                    getTitleWidget(title, false),
+                    new Container(
+                        height: 200,
+                        width:MediaQuery.of(context).size.width,
+                        child: ListView.builder(
+                          itemBuilder: (context, index) {
+                            return GalleryWidget(
+                                data: sectionData[index], index: index);
+                          },
+                          scrollDirection: Axis.horizontal,
+                          itemCount: sectionData.length,
+                          shrinkWrap: false,
+                          // todo comment this out and check the result
+                          physics:
+                          ClampingScrollPhysics(), // todo comment this out and check the result
+                        ))
+                  ],
+                )));
+      } else {
+        return Container();
+      }
+    } else {
+      return Container();
+    }
+  }
+/*
+  Widget PhotoSection(BuildContext context, List<NewsData> newsData) {
+
+    return ListView.builder(
+      // ignore: missing_return
+        controller: _scrollController,
+        itemBuilder: (context, index) {
+          if(newsData[index] is Item){
+            return Container(
+                color: Colors.black,
+                child: Padding(
+                    padding: EdgeInsets.symmetric(vertical: 14.0),
+                    child: Column(
+                      children: <Widget>[
+                        getTitleWidget(, false),
+                        new Container(
+                          height: 180.0,
+                          child: ListView.builder(
+                            itemBuilder: (context, index) {
+                              return GalleryWidget(
+                                  data: NewsData, index: index);
+                            },
+                            scrollDirection: Axis.horizontal,
+                            itemCount: item.length,
+                            shrinkWrap: false,
+                            // todo comment this out and check the result
+                            physics:
+                            ClampingScrollPhysics(), // todo comment this out and check the result
+                          ),
+                        ),
+                      ],
+                    )));
+          }
+          else if (newsData[index] is Entertainment){
+            return Container(
+                color: Colors.black,
+                child: Padding(
+                    padding: EdgeInsets.symmetric(vertical: 14.0),
+                    child: Column(
+                      children: <Widget>[
+                        getTitleWidget(title, false),
+                        new Container(
+                          height: 180.0,
+                          child: ListView.builder(
+                            itemBuilder: (context, index) {
+                              return GalleryWidget(
+                                  data: item[index], index: index);
+                            },
+                            scrollDirection: Axis.horizontal,
+                            itemCount: item.length,
+                            shrinkWrap: false,
+                            // todo comment this out and check the result
+                            physics:
+                            ClampingScrollPhysics(), // todo comment this out and check the result
+                          ),
+                        ),
+                      ],
+                    )));
+          }
+
+        },
+        itemCount: newsData.length);
+
+  }*/
 }

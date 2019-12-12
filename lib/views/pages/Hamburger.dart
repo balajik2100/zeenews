@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:http/http.dart';
 import 'package:scoped_model/scoped_model.dart';
 import 'package:zeenews/AppLocalizations.dart';
@@ -82,7 +83,7 @@ class HamburgerState extends State<Hamburger> {
                     widget.sections[index].title,
                     style: TextStyle(color: Colors.black, fontSize: 16),
                   ),
-                  leading: Icon(Icons.home),
+                  leading:Container(height: 20,width: 20,child:SvgPicture.network(widget.sections[index].icon_url!=null?widget.sections[index].icon_url:"")),
                   onTap: () {
                     Navigator.pop(context);
                     Navigator.of(context).push(MaterialPageRoute(
@@ -97,7 +98,7 @@ class HamburgerState extends State<Hamburger> {
               } else if (widget.sections[index].subSections is List) {
                 return ExpansionTile(
                   title: Text(widget.sections[index].title),
-                  leading: Icon(Icons.home),
+                  leading: Container(height: 20,width: 20,child:SvgPicture.network(widget.sections[index].icon_url!=null?widget.sections[index].icon_url:"")),
                   children: [
                     getItemsListForSideMenu(context, widget.sections[index])
                   ],

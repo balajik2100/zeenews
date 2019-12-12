@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/ravi/Documents/zee/z5x/zeenews/build/permission_handler/intermediates/res/merged/release/drawable/notification_tile_bg.xml",
+        "source": "/Users/ravi/.gradle/caches/transforms-2/files-2.1/397f55e652ab2d8b6ad269620ac1e6a0/core-1.1.0/res/drawable/notification_tile_bg.xml"
+    },
+    {
+        "merged": "/Users/ravi/Documents/zee/z5x/zeenews/build/permission_handler/intermediates/res/merged/release/drawable/notification_bg.xml",
+        "source": "/Users/ravi/.gradle/caches/transforms-2/files-2.1/397f55e652ab2d8b6ad269620ac1e6a0/core-1.1.0/res/drawable/notification_bg.xml"
+    },
+    {
+        "merged": "/Users/ravi/Documents/zee/z5x/zeenews/build/permission_handler/intermediates/res/merged/release/drawable/notification_bg_low.xml",
+        "source": "/Users/ravi/.gradle/caches/transforms-2/files-2.1/397f55e652ab2d8b6ad269620ac1e6a0/core-1.1.0/res/drawable/notification_bg_low.xml"
+    },
+    {
+        "merged": "/Users/ravi/Documents/zee/z5x/zeenews/build/permission_handler/intermediates/res/merged/release/drawable/notification_icon_background.xml",
+        "source": "/Users/ravi/.gradle/caches/transforms-2/files-2.1/397f55e652ab2d8b6ad269620ac1e6a0/core-1.1.0/res/drawable/notification_icon_background.xml"
+    }
+]

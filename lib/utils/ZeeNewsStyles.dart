@@ -21,9 +21,9 @@ class CustomColors {
 class Configuration {
 
   //BASE URL
-  static const String BASE_URL = "https://stage2.zeenews.com/pwaapi";
+ // static const String BASE_URL = "https://stage2.zeenews.com/pwaapi";
 
-  static const String LANG_BASE_URL = "https://zeenews.india.com/pwaapi";
+  static const String BASE_URL = "https://zeenews.india.com/pwaapi";
 
 
   //Dynamic Section Menu
@@ -37,7 +37,6 @@ class Configuration {
   static const String LIVE_SECTION_URL =BASE_URL+"/livetv.php";
   static const String PHOTOS_SECTION_URL =BASE_URL+"/photolist.php";
   static const String VIDEOS_SECTION_URL =BASE_URL+"/videolist.php";
-
 
   //WEB API
   static const String CONTACT_URL =BASE_URL+"/contact.php";

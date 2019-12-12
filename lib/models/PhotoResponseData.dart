@@ -2,7 +2,7 @@ import 'package:zeenews/models/HomeReponseData.dart';
 
 class PhotoResponseData {
   List<Breadcrumb> breadcrumb;
-  List<News> news;
+  List<NewsDataItem> news;
   List<Item> trendingPhotos;
 
   PhotoResponseData({this.breadcrumb, this.news, this.trendingPhotos});
@@ -15,9 +15,9 @@ class PhotoResponseData {
       });
     }
     if (json['news'] != null) {
-      news = new List<News>();
+      news = new List<NewsDataItem>();
       json['news'].forEach((v) {
-        news.add(new News.fromJson(v));
+        news.add(new NewsDataItem.fromJson(v));
       });
     }
     if (json['trending_photos'] != null) {
@@ -66,14 +66,15 @@ class Breadcrumb {
   }
 }
 
-class News {
+class NewsDataItem {
+
   List<Entertainment> entertainment;
-  List<Item> sports;
-  List<Item> business;
+  List<Sports> sports;
+  List<Business> business;
 
-  News({this.entertainment, this.sports, this.business});
+  NewsDataItem({this.entertainment, this.sports, this.business});
 
-  News.fromJson(Map<String, dynamic> json) {
+  NewsDataItem.fromJson(Map<String, dynamic> json) {
     if (json['entertainment'] != null) {
       entertainment = new List<Entertainment>();
       json['entertainment'].forEach((v) {
@@ -81,15 +82,15 @@ class News {
       });
     }
     if (json['sports'] != null) {
-      sports = new List<Item>();
+      sports = new List<Sports>();
       json['sports'].forEach((v) {
-        sports.add(new Item.fromJson(v));
+        sports.add(new Sports.fromJson(v));
       });
     }
     if (json['business'] != null) {
-      business = new List<Item>();
+      business = new List<Business>();
       json['business'].forEach((v) {
-        business.add(new Item.fromJson(v));
+        business.add(new Business.fromJson(v));
       });
     }
   }
@@ -97,8 +98,7 @@ class News {
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     if (this.entertainment != null) {
-      data['entertainment'] =
-          this.entertainment.map((v) => v.toJson()).toList();
+      data['entertainment'] = this.entertainment.map((v) => v.toJson()).toList();
     }
     if (this.sports != null) {
       data['sports'] = this.sports.map((v) => v.toJson()).toList();
@@ -110,7 +110,104 @@ class News {
   }
 }
 
+
+class Sports {
+  String name;
+  String sectionId;
+  String sectionUrl;
+  List<Item> photos;
+
+  Sports({this.name, this.sectionId, this.sectionUrl, this.photos});
+
+  Sports.fromJson(Map<String, dynamic> json) {
+    name = json['name'];
+    sectionId = json['section_id'];
+    sectionUrl = json['section_url'];
+    if (json['photos'] != null) {
+      photos = new List<Item>();
+      json['photos'].forEach((v) {
+        photos.add(new Item.fromJson(v));
+      });
+    }
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['name'] = this.name;
+    data['section_id'] = this.sectionId;
+    data['section_url'] = this.sectionUrl;
+    if (this.photos != null) {
+      data['photos'] = this.photos.map((v) => v.toJson()).toList();
+    }
+    return data;
+  }
+}
+
+class Business {
+  String name;
+  String sectionId;
+  String sectionUrl;
+  List<Item> photos;
+
+  Business({this.name, this.sectionId, this.sectionUrl, this.photos});
+
+  Business.fromJson(Map<String, dynamic> json) {
+    name = json['name'];
+    sectionId = json['section_id'];
+    sectionUrl = json['section_url'];
+    if (json['photos'] != null) {
+      photos = new List<Item>();
+      json['photos'].forEach((v) {
+        photos.add(new Item.fromJson(v));
+      });
+    }
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['name'] = this.name;
+    data['section_id'] = this.sectionId;
+    data['section_url'] = this.sectionUrl;
+    if (this.photos != null) {
+      data['photos'] = this.photos.map((v) => v.toJson()).toList();
+    }
+    return data;
+  }
+}
+
 class Entertainment {
+  String name;
+  String sectionId;
+  String sectionUrl;
+  List<Item> photos;
+
+  Entertainment({this.name, this.sectionId, this.sectionUrl, this.photos});
+
+  Entertainment.fromJson(Map<String, dynamic> json) {
+    name = json['name'];
+    sectionId = json['section_id'];
+    sectionUrl = json['section_url'];
+    if (json['photos'] != null) {
+      photos = new List<Item>();
+      json['photos'].forEach((v) {
+        photos.add(new Item.fromJson(v));
+      });
+    }
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['name'] = this.name;
+    data['section_id'] = this.sectionId;
+    data['section_url'] = this.sectionUrl;
+    if (this.photos != null) {
+      data['photos'] = this.photos.map((v) => v.toJson()).toList();
+    }
+    return data;
+  }
+}
+
+class Photos {
   int id;
   String timestamp;
   String title;
@@ -126,7 +223,7 @@ class Entertainment {
   String newsType;
   int galleryImagesCount;
 
-  Entertainment(
+  Photos(
       {this.id,
         this.timestamp,
         this.title,
@@ -142,7 +239,7 @@ class Entertainment {
         this.newsType,
         this.galleryImagesCount});
 
-  Entertainment.fromJson(Map<String, dynamic> json) {
+  Photos.fromJson(Map<String, dynamic> json) {
     id = json['id'];
     timestamp = json['timestamp'];
     title = json['title'];

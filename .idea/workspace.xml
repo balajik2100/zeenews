@@ -11,24 +11,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="29734203-142f-4063-9958-c54c818d1fc7" name="Default Changelist" comment="localiztion changes">
-      <change afterPath="$PROJECT_DIR$/assets/images/more.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/tag.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/volumeup.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/whatsapp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/models/DetailResponseData.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/models/LiveResponseData.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/models/PhotoResponseData.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/models/VideoResponseData.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/views/pages/DetailsPageWidget.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/views/widgets/BreakingWidget.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/views/widgets/CommonPageWidget.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/views/widgets/ScoreCardWidget.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/.packages" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/5.4.1/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/5.4.1/fileContent/fileContent.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/5.4.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/5.4.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
@@ -37,42 +23,25 @@
       <change beforePath="$PROJECT_DIR$/android/.gradle/5.4.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/5.4.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/local.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Flutter/App.framework/flutter_assets/AssetManifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/App.framework/flutter_assets/AssetManifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Flutter/App.framework/flutter_assets/FontManifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/App.framework/flutter_assets/FontManifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/Flutter/App.framework/flutter_assets/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/App.framework/flutter_assets/LICENSE" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/Flutter/App.framework/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/App.framework/flutter_assets/kernel_blob.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Flutter/App.framework/flutter_assets/locale/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/App.framework/flutter_assets/locale/en.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Flutter/App.framework/flutter_assets/locale/hi.json" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/App.framework/flutter_assets/locale/hi.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/AppLocalizations.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/AppLocalizations.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/interfaces/ZeeNewsAPIInterface.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/interfaces/ZeeNewsAPIInterface.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Pods/Pods.xcodeproj/xcuserdata/ravi.xcuserdatad/xcschemes/Pods-Runner.xcscheme" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Pods/Pods.xcodeproj/xcuserdata/ravi.xcuserdatad/xcschemes/Pods-Runner.xcscheme" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner.xcworkspace/xcuserdata/ravi.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner.xcworkspace/xcuserdata/ravi.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/models/HomeReponseData.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/HomeReponseData.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/models/PhotoResponseData.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/PhotoResponseData.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/models/SectionResponseData.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/SectionResponseData.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/models/VideoResponseData.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/VideoResponseData.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/services/ZeeAPIService.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/services/ZeeAPIService.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/utils/Types.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils/Types.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/utils/Utils.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils/Utils.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/utils/ZeeNewsStyles.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils/ZeeNewsStyles.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/view_models/MainPageViewModel.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view_models/MainPageViewModel.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/views/pages/Hamburger.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/pages/Hamburger.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/views/pages/HomePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/pages/HomePage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/pages/SectionListPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/pages/SectionListPage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/pages/SplashScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/pages/SplashScreen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/pages/Videoplayer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/pages/Videoplayer.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/widgets/AddNewTab.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/widgets/AddNewTab.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/widgets/BannerWidget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/widgets/BannerWidget.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/widgets/Banner_NewsListWidget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/widgets/Banner_NewsListWidget.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/widgets/BlogWidget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/widgets/BlogWidget.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/widgets/ChipWidget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/widgets/ChipWidget.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/widgets/GalleryWidget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/widgets/GalleryWidget.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/widgets/HomeSection.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/widgets/HomeSection.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/widgets/ListviewWidget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/widgets/ListviewWidget.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/widgets/LogoWidget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/widgets/LogoWidget.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/widgets/NewsListWidget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/widgets/NewsListWidget.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/widgets/PageWidget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/widgets/PageWidget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/views/widgets/CommonPageWidget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/widgets/CommonPageWidget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/views/widgets/PhotoSection.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/widgets/PhotoSection.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/views/widgets/VideoSection.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/widgets/VideoSection.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zeenews.iml" beforeDir="false" afterPath="$PROJECT_DIR$/zeenews.iml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -91,39 +60,53 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/view_models/MainPageViewModel.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="94" column="34" selection-start-line="94" selection-start-column="34" selection-end-line="94" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/services/ZeeAPIService.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="199" column="39" selection-start-line="199" selection-start-column="39" selection-end-line="199" selection-end-column="39" />
+            <state relative-caret-position="475">
+              <caret line="173" column="52" lean-forward="true" selection-start-line="173" selection-start-column="52" selection-end-line="173" selection-end-column="52" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/interfaces/ZeeNewsAPIInterface.dart">
+        <entry file="file://$PROJECT_DIR$/lib/utils/ZeeNewsStyles.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+            <state relative-caret-position="476">
+              <caret line="45" selection-start-line="45" selection-end-line="45" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/views/widgets/PhotoSection.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="17" column="37" lean-forward="true" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/models/HomeReponseData.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="194" selection-start-line="194" selection-end-line="194" />
+            <state relative-caret-position="467">
+              <caret line="88" column="25" lean-forward="true" selection-start-line="88" selection-start-column="25" selection-end-line="88" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/views/widgets/CommonPageWidget.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="191">
+              <caret line="183" column="14" lean-forward="true" selection-start-line="183" selection-start-column="14" selection-end-line="183" selection-end-column="14" />
               <folding>
-                <element signature="e#0#40#0" expanded="true" />
+                <element signature="e#0#39#0" expanded="true" />
+                <element signature="e#11745#12819#0" />
+                <element signature="e#9172#11783#0" />
               </folding>
             </state>
           </provider>
@@ -132,46 +115,19 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/models/PhotoResponseData.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="580">
-              <caret line="144" column="16" selection-start-line="144" selection-start-column="16" selection-end-line="144" selection-end-column="16" />
+            <state relative-caret-position="45">
+              <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="43" selection-end-column="3" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/views/widgets/PhotoSection.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/views/widgets/LiveSection.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/models/VideoResponseData.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/views/widgets/VideoSection.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="51" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
+            <state relative-caret-position="465">
+              <caret line="31" column="33" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
               <folding>
-                <element signature="e#0#40#0" expanded="true" />
+                <element signature="e#0#53#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -180,10 +136,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/views/pages/HomePage.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="56">
-              <caret line="49" column="42" selection-start-line="49" selection-start-column="42" selection-end-line="49" selection-end-column="42" />
+            <state relative-caret-position="253">
+              <caret line="50" column="47" selection-start-line="50" selection-start-column="47" selection-end-line="50" selection-end-column="47" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/views/widgets/VideoSection.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -201,7 +169,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getHomePage</find>
       <find>ModuleRootEvent</find>
       <find>sizedbox</find>
       <find>LanguageList</find>
@@ -231,6 +198,7 @@
       <find>SHARE</find>
       <find>getti</find>
       <find>Trending</find>
+      <find>gallery</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -247,19 +215,16 @@
         <option value="$PROJECT_DIR$/android/gradle.properties" />
         <option value="$PROJECT_DIR$/android/app/build.gradle" />
         <option value="$PROJECT_DIR$/ios/Runner/Info.plist" />
-        <option value="$PROJECT_DIR$/lib/models/SectionResponseData.dart" />
         <option value="$PROJECT_DIR$/assets/locale/hi.json" />
         <option value="$PROJECT_DIR$/assets/locale/en.json" />
         <option value="$PROJECT_DIR$/locale/en.json" />
         <option value="$PROJECT_DIR$/locale/hi.json" />
         <option value="$PROJECT_DIR$/lib/main.dart" />
-        <option value="$PROJECT_DIR$/lib/views/pages/Hamburger.dart" />
         <option value="$PROJECT_DIR$/lib/AppLocalizations.dart" />
         <option value="$PROJECT_DIR$/lib/views/widgets/DetailsPageWidget.dart" />
         <option value="$PROJECT_DIR$/lib/views/widgets/AddNewTab.dart" />
         <option value="$PROJECT_DIR$/lib/views/pages/SectionListPage.dart" />
         <option value="$PROJECT_DIR$/lib/views/widgets/BreakingWidget.dart" />
-        <option value="$PROJECT_DIR$/lib/utils/Types.dart" />
         <option value="$PROJECT_DIR$/lib/views/widgets/ScoreCardWidget.dart" />
         <option value="$PROJECT_DIR$/lib/models/DetailResponseData.dart" />
         <option value="$PROJECT_DIR$/lib/views/widgets/Banner_NewsListWidget.dart" />
@@ -269,7 +234,6 @@
         <option value="$PROJECT_DIR$/lib/views/widgets/GalleryWidget.dart" />
         <option value="$PROJECT_DIR$/lib/views/widgets/LogoWidget.dart" />
         <option value="$PROJECT_DIR$/lib/views/pages/SplashScreen.dart" />
-        <option value="$PROJECT_DIR$/pubspec.yaml" />
         <option value="$PROJECT_DIR$/lib/utils/SettingMenu.dart" />
         <option value="$PROJECT_DIR$/lib/utils/Utils.dart" />
         <option value="$PROJECT_DIR$/lib/views/pages/Videoplayer.dart" />
@@ -277,28 +241,32 @@
         <option value="$PROJECT_DIR$/lib/views/widgets/ListviewWidget.dart" />
         <option value="$PROJECT_DIR$/lib/views/pages/DetailsPageWidget.dart" />
         <option value="$PROJECT_DIR$/lib/models/LiveResponseData.dart" />
-        <option value="$PROJECT_DIR$/lib/models/PhotoResponseData.dart" />
-        <option value="$PROJECT_DIR$/lib/utils/ZeeNewsStyles.dart" />
         <option value="$PROJECT_DIR$/lib/views/widgets/HomeSection.dart" />
         <option value="$PROJECT_DIR$/lib/views/widgets/LiveSection.dart" />
         <option value="$PROJECT_DIR$/lib/views/widgets/PageWidget.dart" />
-        <option value="$PROJECT_DIR$/lib/views/widgets/CommonPageWidget.dart" />
+        <option value="$PROJECT_DIR$/lib/utils/Types.dart" />
+        <option value="$PROJECT_DIR$/lib/models/SectionResponseData.dart" />
+        <option value="$PROJECT_DIR$/pubspec.yaml" />
+        <option value="$PROJECT_DIR$/lib/views/pages/Hamburger.dart" />
+        <option value="$PROJECT_DIR$/lib/view_models/MainPageViewModel.dart" />
         <option value="$PROJECT_DIR$/lib/interfaces/ZeeNewsAPIInterface.dart" />
-        <option value="$PROJECT_DIR$/lib/models/HomeReponseData.dart" />
-        <option value="$PROJECT_DIR$/lib/views/widgets/PhotoSection.dart" />
+        <option value="$PROJECT_DIR$/lib/models/PhotoResponseData.dart" />
         <option value="$PROJECT_DIR$/lib/views/pages/HomePage.dart" />
         <option value="$PROJECT_DIR$/lib/services/ZeeAPIService.dart" />
-        <option value="$PROJECT_DIR$/lib/view_models/MainPageViewModel.dart" />
-        <option value="$PROJECT_DIR$/lib/views/widgets/VideoSection.dart" />
+        <option value="$PROJECT_DIR$/lib/utils/ZeeNewsStyles.dart" />
         <option value="$PROJECT_DIR$/lib/models/VideoResponseData.dart" />
+        <option value="$PROJECT_DIR$/lib/views/widgets/PhotoSection.dart" />
+        <option value="$PROJECT_DIR$/lib/views/widgets/VideoSection.dart" />
+        <option value="$PROJECT_DIR$/lib/views/widgets/CommonPageWidget.dart" />
+        <option value="$PROJECT_DIR$/lib/models/HomeReponseData.dart" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="12" />
-    <option name="y" value="23" />
-    <option name="width" value="1908" />
-    <option name="height" value="977" />
+    <option name="x" value="98" />
+    <option name="y" value="64" />
+    <option name="width" value="1692" />
+    <option name="height" value="870" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -313,48 +281,6 @@
             <path>
               <item name="zeenews" type="b2602c69:ProjectViewProjectNode" />
               <item name="zeenews" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zeenews" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zeenews" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zeenews" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zeenews" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zeenews" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zeenews" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="generated" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zeenews" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zeenews" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="outputs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zeenews" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zeenews" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="outputs" type="462c0819:PsiDirectoryNode" />
-              <item name="apk" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zeenews" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zeenews" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="outputs" type="462c0819:PsiDirectoryNode" />
-              <item name="apk" type="462c0819:PsiDirectoryNode" />
-              <item name="release" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="zeenews" type="b2602c69:ProjectViewProjectNode" />
@@ -594,29 +520,30 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="12" y="23" width="1908" height="977" extended-state="0" />
+    <frame x="98" y="64" width="1692" height="870" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.496994" visible="true" weight="0.16613077" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.78341794" visible="true" weight="0.18787879" />
       <window_info id="Structure" order="1" sideWeight="0.50300604" side_tool="true" weight="0.16187434" />
       <window_info id="Captures" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Designer" order="4" />
-      <window_info id="Build Variants" order="5" sideWeight="0.5025729" side_tool="true" weight="0.16187434" />
+      <window_info id="Build Variants" order="5" sideWeight="0.21658206" side_tool="true" weight="0.17203107" />
       <window_info id="Resources Explorer" order="6" weight="0.32960597" />
       <window_info id="Capture Tool" order="7" />
       <window_info id="Favorites" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Dart Analysis" order="0" weight="0.32946634" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.33672318" />
       <window_info anchor="bottom" id="Android Profiler" order="2" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49732047" weight="0.41415313" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.31322506" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49732047" weight="0.23199023" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.21854305" />
       <window_info anchor="bottom" id="Logcat" order="5" weight="0.2262181" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32946634" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49946752" weight="0.26334107" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49946752" weight="0.23321123" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5039414" side_tool="true" weight="0.5058005" />
       <window_info anchor="bottom" id="Flutter Performance" order="9" sideWeight="0.5026795" side_tool="true" weight="0.47215778" />
       <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49893504" visible="true" weight="0.3863109" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49893504" weight="0.43589744" />
       <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.5774011" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" weight="0.32960597" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
@@ -975,7 +902,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="Dart">
           <url>file://$PROJECT_DIR$/lib/views/pages/Hamburger.dart</url>
-          <line>259</line>
+          <line>260</line>
           <option name="timeStamp" value="481" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="Dart">
@@ -1025,13 +952,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="Dart">
           <url>file://$PROJECT_DIR$/lib/views/pages/Hamburger.dart</url>
-          <line>301</line>
+          <line>302</line>
           <option name="timeStamp" value="500" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/services/ZeeAPIService.dart</url>
-          <line>109</line>
-          <option name="timeStamp" value="516" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="Dart">
           <url>file://$PROJECT_DIR$/lib/views/widgets/PageWidget.dart</url>
@@ -1072,11 +994,6 @@
           <url>file://$PROJECT_DIR$/lib/views/pages/DetailsPageWidget.dart</url>
           <line>128</line>
           <option name="timeStamp" value="584" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/services/ZeeAPIService.dart</url>
-          <line>111</line>
-          <option name="timeStamp" value="585" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="Dart">
           <url>file://$PROJECT_DIR$/lib/views/pages/DetailsPageWidget.dart</url>
@@ -1189,9 +1106,239 @@
           <option name="timeStamp" value="624" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/models/PhotoResponseData.dart</url>
-          <line>5</line>
-          <option name="timeStamp" value="626" />
+          <url>file://$PROJECT_DIR$/lib/views/widgets/CommonPageWidget.dart</url>
+          <line>56</line>
+          <option name="timeStamp" value="655" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/views/widgets/CommonPageWidget.dart</url>
+          <line>48</line>
+          <option name="timeStamp" value="656" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/views/widgets/CommonPageWidget.dart</url>
+          <line>20</line>
+          <option name="timeStamp" value="657" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/services/ZeeAPIService.dart</url>
+          <line>194</line>
+          <option name="timeStamp" value="682" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/services/ZeeAPIService.dart</url>
+          <line>196</line>
+          <option name="timeStamp" value="683" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/views/widgets/PhotoSection.dart</url>
+          <line>11</line>
+          <option name="timeStamp" value="684" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/views/widgets/PhotoSection.dart</url>
+          <line>10</line>
+          <option name="timeStamp" value="685" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/views/widgets/PhotoSection.dart</url>
+          <line>13</line>
+          <option name="timeStamp" value="686" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/views/widgets/PhotoSection.dart</url>
+          <line>15</line>
+          <option name="timeStamp" value="687" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/views/widgets/PhotoSection.dart</url>
+          <line>16</line>
+          <option name="timeStamp" value="688" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/views/widgets/PhotoSection.dart</url>
+          <line>18</line>
+          <option name="timeStamp" value="689" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/views/widgets/PhotoSection.dart</url>
+          <line>29</line>
+          <option name="timeStamp" value="690" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/views/widgets/PhotoSection.dart</url>
+          <line>24</line>
+          <option name="timeStamp" value="691" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/services/ZeeAPIService.dart</url>
+          <line>198</line>
+          <option name="timeStamp" value="692" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/services/ZeeAPIService.dart</url>
+          <line>197</line>
+          <option name="timeStamp" value="693" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/views/widgets/CommonPageWidget.dart</url>
+          <line>53</line>
+          <option name="timeStamp" value="694" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/views/widgets/CommonPageWidget.dart</url>
+          <line>55</line>
+          <option name="timeStamp" value="695" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/views/widgets/CommonPageWidget.dart</url>
+          <line>63</line>
+          <option name="timeStamp" value="721" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/views/widgets/CommonPageWidget.dart</url>
+          <line>114</line>
+          <option name="timeStamp" value="722" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/views/widgets/CommonPageWidget.dart</url>
+          <line>113</line>
+          <option name="timeStamp" value="723" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/views/widgets/CommonPageWidget.dart</url>
+          <line>118</line>
+          <option name="timeStamp" value="724" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/views/widgets/CommonPageWidget.dart</url>
+          <line>115</line>
+          <option name="timeStamp" value="728" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/views/widgets/CommonPageWidget.dart</url>
+          <line>117</line>
+          <option name="timeStamp" value="729" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/views/widgets/CommonPageWidget.dart</url>
+          <line>148</line>
+          <option name="timeStamp" value="732" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/views/widgets/CommonPageWidget.dart</url>
+          <line>150</line>
+          <option name="timeStamp" value="733" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/views/widgets/CommonPageWidget.dart</url>
+          <line>155</line>
+          <option name="timeStamp" value="734" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/views/widgets/CommonPageWidget.dart</url>
+          <line>152</line>
+          <option name="timeStamp" value="735" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/views/widgets/CommonPageWidget.dart</url>
+          <line>184</line>
+          <option name="timeStamp" value="741" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/views/widgets/CommonPageWidget.dart</url>
+          <line>186</line>
+          <option name="timeStamp" value="742" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/views/widgets/CommonPageWidget.dart</url>
+          <line>188</line>
+          <option name="timeStamp" value="743" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/views/widgets/CommonPageWidget.dart</url>
+          <line>189</line>
+          <option name="timeStamp" value="744" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/views/widgets/CommonPageWidget.dart</url>
+          <line>195</line>
+          <option name="timeStamp" value="745" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/views/widgets/CommonPageWidget.dart</url>
+          <line>197</line>
+          <option name="timeStamp" value="747" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/views/widgets/GalleryWidget.dart</url>
+          <line>17</line>
+          <option name="timeStamp" value="749" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/views/widgets/GalleryWidget.dart</url>
+          <line>47</line>
+          <option name="timeStamp" value="750" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/views/widgets/CommonPageWidget.dart</url>
+          <line>66</line>
+          <option name="timeStamp" value="754" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/views/widgets/CommonPageWidget.dart</url>
+          <line>67</line>
+          <option name="timeStamp" value="755" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/views/widgets/CommonPageWidget.dart</url>
+          <line>157</line>
+          <option name="timeStamp" value="756" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/views/widgets/CommonPageWidget.dart</url>
+          <line>158</line>
+          <option name="timeStamp" value="757" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/views/widgets/CommonPageWidget.dart</url>
+          <line>153</line>
+          <option name="timeStamp" value="761" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/views/widgets/VideoSection.dart</url>
+          <line>16</line>
+          <option name="timeStamp" value="763" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/views/widgets/VideoSection.dart</url>
+          <line>25</line>
+          <option name="timeStamp" value="764" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/services/ZeeAPIService.dart</url>
+          <line>206</line>
+          <option name="timeStamp" value="765" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/services/ZeeAPIService.dart</url>
+          <line>208</line>
+          <option name="timeStamp" value="766" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/services/ZeeAPIService.dart</url>
+          <line>209</line>
+          <option name="timeStamp" value="767" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/services/ZeeAPIService.dart</url>
+          <line>210</line>
+          <option name="timeStamp" value="768" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/views/widgets/ListviewWidget.dart</url>
+          <line>94</line>
+          <option name="timeStamp" value="769" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -1207,76 +1354,19 @@
         <watch expression="data" />
         <watch expression="rows.toList().length" />
         <watch expression="detailsData" />
+        <watch expression="photoData.news[0].business is Entertainment" />
+        <watch expression="photoData.news[0].entertainment is Entertainment" />
+        <watch expression="photoData.news[0].entertainment != null &amp;&amp;&#10;        photoData.news[0].entertainment.length &gt; 0" />
+        <watch expression="photoData.news[0].entertainment" />
+        <watch expression="photoData.news[0].entertainment.length" />
+        <watch expression="photoData.news[0].entertainment[0].photos" />
+        <watch expression="photoData.news[0].entertainment[0].photos.length" />
+        <watch expression="photoData.news[0].sports" />
+        <watch expression=" json.decode(response.body)" />
       </configuration>
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/views/widgets/ScoreCardWidget.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="79" column="11" selection-start-line="79" selection-start-column="11" selection-end-line="79" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../Ravikumar/Softwares/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/http-0.12.0+2/lib/src/base_response.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../Ravikumar/Softwares/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/http-0.12.0+2/lib/http.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="44" column="17" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../Ravikumar/Softwares/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences-0.4.3/lib/shared_preferences.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="35" column="2" selection-start-line="35" selection-start-column="2" selection-end-line="35" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../Ravikumar/Softwares/Flutter/flutter/bin/cache/pkg/sky_engine/lib/core/iterable.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="210" column="14" selection-start-line="210" selection-start-column="14" selection-end-line="210" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/utils/LocalStorageService.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="24" column="60" selection-start-line="24" selection-start-column="60" selection-end-line="24" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/views/widgets/Banner_NewsListWidget.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/views/widgets/BannerWidget.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="33" column="48" lean-forward="true" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/views/widgets/BreakingWidget.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/views/widgets/DynamicPage.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1338,37 +1428,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/views/pages/Hamburger.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="288" column="58" selection-start-line="288" selection-start-column="16" selection-end-line="288" selection-end-column="58" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pubspec.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="81" column="28" selection-start-line="81" selection-start-column="28" selection-end-line="81" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/views/pages/SplashScreen.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="146" selection-start-line="146" selection-end-line="146" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ios/.symlinks/plugins/webview_flutter/example/lib/main.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="93" column="22" selection-start-line="93" selection-start-column="22" selection-end-line="93" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../Ravikumar/Softwares/Flutter/flutter/packages/flutter/lib/src/material/page.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="191">
@@ -1376,26 +1435,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/utils/SettingMenu.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="67" selection-start-line="67" selection-end-line="67" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/views/widgets/GalleryWidget.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="37" column="45" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/utils/SettingMenu.dart" />
     <entry file="file://$PROJECT_DIR$/../../../Ravikumar/Softwares/Flutter/flutter/packages/flutter/lib/src/gestures/tap.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="191">
@@ -1447,16 +1487,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/views/widgets/ListviewWidget.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="105" column="80" selection-start-line="105" selection-start-column="80" selection-end-line="105" selection-end-column="80" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../Ravikumar/Softwares/Flutter/flutter/packages/flutter/lib/src/services/message_codecs.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="354">
@@ -1468,16 +1498,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/views/pages/DetailsPageWidget.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="55" column="58" lean-forward="true" selection-start-line="55" selection-start-column="58" selection-end-line="55" selection-end-column="58" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1502,115 +1522,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/utils/ZeeNewsStyles.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="35" column="33" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/views/widgets/HomeSection.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="67" selection-start-line="15" selection-start-column="67" selection-end-line="15" selection-end-column="67" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/views/widgets/PageWidget.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="537">
-          <caret line="289" column="59" selection-start-line="289" selection-start-column="59" selection-end-line="289" selection-end-column="59" />
-          <folding>
-            <element signature="e#1792#3895#0" />
-            <element signature="e#3946#5208#0" />
-            <element signature="e#5254#7255#0" />
-            <element signature="e#7309#8378#0" />
-            <element signature="e#8487#9741#0" />
-            <element signature="e#9787#10999#0" />
-            <element signature="e#11045#12296#0" />
-            <element signature="e#12346#13581#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/views/widgets/CommonPageWidget.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/models/PhotoResponseData.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="144" column="16" selection-start-line="144" selection-start-column="16" selection-end-line="144" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/models/HomeReponseData.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="194" selection-start-line="194" selection-end-line="194" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/views/pages/HomePage.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="49" column="42" selection-start-line="49" selection-start-column="42" selection-end-line="49" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/services/ZeeAPIService.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="199" column="39" selection-start-line="199" selection-start-column="39" selection-end-line="199" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/view_models/MainPageViewModel.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="94" column="34" selection-start-line="94" selection-start-column="34" selection-end-line="94" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/interfaces/ZeeNewsAPIInterface.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/views/widgets/VideoSection.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="51" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/views/widgets/PhotoSection.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/views/widgets/LiveSection.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1618,10 +1529,243 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/views/widgets/HomeSection.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" selection-start-line="7" selection-end-line="75" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#366#2626#0" />
+            <element signature="e#470#1490#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/utils/Types.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/views/pages/DetailsPageWidget.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="256" column="57" selection-start-line="256" selection-start-column="57" selection-end-line="256" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pubspec.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="50" column="22" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/views/pages/Hamburger.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="94" column="64" lean-forward="true" selection-start-line="94" selection-start-column="64" selection-end-line="94" selection-end-column="64" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/models/SectionResponseData.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="31" column="12" lean-forward="true" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/views/pages/SplashScreen.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="156" column="39" lean-forward="true" selection-start-line="156" selection-start-column="39" selection-end-line="156" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/main.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="63" column="32" lean-forward="true" selection-start-line="63" selection-start-column="32" selection-end-line="63" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ios/.symlinks/plugins/webview_flutter/example/lib/main.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-723">
+          <caret line="93" column="22" selection-start-line="93" selection-start-column="22" selection-end-line="93" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/views/pages/SectionListPage.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-561">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../Ravikumar/Softwares/Flutter/flutter/packages/flutter/lib/src/widgets/framework.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="4046" column="26" selection-start-line="4046" selection-start-column="26" selection-end-line="4046" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/views/widgets/AddNewTab.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="53" column="8" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ios/Runner.xcworkspace/contents.xcworkspacedata">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/interfaces/ZeeNewsAPIInterface.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../Ravikumar/Softwares/Flutter/flutter/packages/flutter/lib/src/widgets/debug.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="270" column="6" selection-start-line="270" selection-start-column="6" selection-end-line="270" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../Ravikumar/Softwares/Flutter/flutter/packages/flutter/lib/src/widgets/container.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-32">
+          <caret line="299" column="2" selection-start-line="299" selection-start-column="2" selection-end-line="299" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/views/widgets/GalleryWidget.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="47" column="47" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/view_models/MainPageViewModel.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="93" column="15" selection-start-line="93" selection-start-column="15" selection-end-line="93" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/views/pages/HomePage.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="50" column="47" selection-start-line="50" selection-start-column="47" selection-end-line="50" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/models/PhotoResponseData.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="43" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/models/VideoResponseData.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+        <state relative-caret-position="465">
+          <caret line="31" column="33" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/utils/ZeeNewsStyles.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/views/widgets/VideoSection.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/views/widgets/PageWidget.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3532">
+          <caret line="89" column="63" lean-forward="true" selection-start-line="89" selection-start-column="63" selection-end-line="89" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/views/widgets/ListviewWidget.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="97" column="37" selection-start-line="97" selection-start-column="37" selection-end-line="97" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/views/widgets/CommonPageWidget.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="183" column="14" lean-forward="true" selection-start-line="183" selection-start-column="14" selection-end-line="183" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#11745#12819#0" />
+            <element signature="e#9172#11783#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/views/widgets/PhotoSection.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="17" column="37" lean-forward="true" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/services/ZeeAPIService.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="173" column="52" lean-forward="true" selection-start-line="173" selection-start-column="52" selection-end-line="173" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/models/HomeReponseData.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="88" column="25" lean-forward="true" selection-start-line="88" selection-start-column="25" selection-end-line="88" selection-end-column="25" />
         </state>
       </provider>
     </entry>

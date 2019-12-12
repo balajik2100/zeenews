@@ -28,6 +28,7 @@ class Sections {
   String thumbnailUrl;
   Object subSections;
   String newsType;
+  String icon_url;
   Object id;
 
   Sections(
@@ -45,6 +46,7 @@ class Sections {
     sectionUrl = json['section_url'];
     thumbnailUrl = json['thumbnail_url'];
     subSections =json.containsKey("sub_sections")?json['sub_sections']:"";
+    icon_url =json.containsKey("icon_url")?json['icon_url']:"";
   //  newsType = json['news_type'];
   //  id = json['id'];
   }
