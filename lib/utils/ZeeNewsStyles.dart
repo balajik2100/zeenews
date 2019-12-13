@@ -23,29 +23,30 @@ class Configuration {
   //BASE URL
  // static const String BASE_URL = "https://stage2.zeenews.com/pwaapi";
 
-  static const String BASE_URL = "https://zeenews.india.com/pwaapi";
+  static const String BASE_URL = "https://zeenews.india.com";
 
 
   //Dynamic Section Menu
-  static const String SECTION_LIST_URL =BASE_URL+"/sectionlist.php";
+  static const String SECTION_LIST_URL =BASE_URL+"/pwaapi/sectionlist.php";
 
   //Language API
-  static const String LANGUAGE_MENU_URL =BASE_URL+"/languagemeu.php";
+  static const String LANGUAGE_MENU_URL =BASE_URL+"/pwaapi/languagemeu.php";
 
   //Sections API
-  static const String HOME_SECTION_URL =BASE_URL+"/home.php";
-  static const String LIVE_SECTION_URL =BASE_URL+"/livetv.php";
-  static const String PHOTOS_SECTION_URL =BASE_URL+"/photolist.php";
-  static const String VIDEOS_SECTION_URL =BASE_URL+"/videolist.php";
+  static const String HOME_SECTION_URL =BASE_URL+"/pwaapi/home.php";
+  static const String LIVE_SECTION_URL =BASE_URL+"/pwaapi/livetv.php";
+  static const String PHOTOS_SECTION_URL =BASE_URL+"/pwaapi/photolist.php";
+  static const String VIDEOS_SECTION_URL =BASE_URL+"/pwaapi/videolist.php";
 
   //WEB API
-  static const String CONTACT_URL =BASE_URL+"/contact.php";
-  static const String DISCLAIMER_URL =BASE_URL+"/disclaimer.php";
-  static const String PRIVACY_URL =BASE_URL+"/privacy.php";
+  static const String CONTACT_URL =BASE_URL+"/pwaapi/contact.php";
+  static const String DISCLAIMER_URL =BASE_URL+"/pwaapi/disclaimer.php";
+  static const String PRIVACY_URL =BASE_URL+"/pwaapi/privacy.php";
 
 
   //Article Detail API
-  static const String DETAILS_VIEW_URL =BASE_URL+"/newsdetail.php?newsid=";
+  static const String DETAILS_VIEW_URL =BASE_URL+"/pwaapi/newsdetail.php?newsid=";
+  static const String DETAILS_VIEW_URL_HINDI =BASE_URL+"/hindi/pwaapi/newsdetail.php?newsid=";
 
 
 

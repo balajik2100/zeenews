@@ -23,7 +23,7 @@ class PhotoScreen extends StatelessWidget {
               case ConnectionState.done:
                 if (snapshot.hasData) {
                   var sectionsData = snapshot.data;
-                    return CommonPageWidget(photo: sectionsData,type:"photo");
+                    return SectionPage(context,photoData: sectionsData);
                 }
                 else if (snapshot.hasError) {
                   return InternetConnection(
@@ -40,38 +40,20 @@ class PhotoScreen extends StatelessWidget {
     );
   }
 
-  underLineBoxDecoration() {
-    return BoxDecoration(
-        border: Border(bottom: BorderSide(color: Colors.red, width: 1.0)));
-  }
+  Widget SectionPage(BuildContext context, {PhotoResponseData photoData}) {
+    if (photoData != null &&
+        photoData.news != null &&
+        photoData.news.length > 0) {
 
-  getTitleWidget(String title,bool news) {
-    return Row(
-      children: <Widget>[
-        Expanded(
-            flex: 9,
-            child: Align(
-              alignment: Alignment.centerLeft,
-              child: Padding(
-                  padding: EdgeInsets.only(left: 15.0,top: 5.0,bottom: 5.0),
-                  child: Container(
-                      decoration: underLineBoxDecoration(),
-                      child: Text('$title',
-                          style: TextStyle(
-                              color:news?Colors.black:Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 16.0)))),
-            )
-        )
-        ,
-        Align(
-          alignment: Alignment.centerRight,
-          child: Padding(
-              padding: EdgeInsets.only(left: 15.0,top: 5.0,bottom: 5.0,right: 5.0),
-              child: Container(
-                  child: Icon(Icons.arrow_right)
-              )),
-        )
-      ],);
+      List<NewsDataItem> newsData = photoData.news;
+
+      return AlbumGalleryWidget(newsdata: newsData);
+    }
+    else {
+      return Container(
+        child: Align(alignment: Alignment.center, child: Text("Coming Soon")),
+      );
+    }
+
   }
 }

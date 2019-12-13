@@ -45,7 +45,8 @@ class _NewsWidgetState extends State<NewsWidget> {
                 EdgeInsets.only(left: 10.0, right: 10.0, top: 4.0, bottom: 4.0),
             color: Colors.white,
             child:GestureDetector(onTap: (){
-              Navigator.of(context).push(MaterialPageRoute( builder: (context) => DetailsPageWidget(context:context,viewModel: mainPageVM,data: widget.data)));
+              if(widget.data!=null && widget.data.id!=null)
+                Navigator.of(context).push(MaterialPageRoute( builder: (context) => DetailsPageWidget(context:context,viewModel: mainPageVM,data: widget.data)));
             },child:
             Card(
               elevation: 3.0,

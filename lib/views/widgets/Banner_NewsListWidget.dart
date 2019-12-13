@@ -47,7 +47,13 @@ class Banner_NewsWidget extends StatelessWidget {
             color: Colors.white,
             child: GestureDetector(
                 onTap: () {
-                    Navigator.of(context).push(MaterialPageRoute( builder: (context) => DetailsPageWidget(context:context,viewModel: mainPageVM,data: data)));
+                  if(data!=null && data.id!=null) {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) =>
+                            DetailsPageWidget(context: context,
+                                viewModel: mainPageVM,
+                                data: data)));
+                  }
                 },
                 child: Card(
                   elevation: 3.0,

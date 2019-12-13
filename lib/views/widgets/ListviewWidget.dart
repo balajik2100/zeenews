@@ -64,6 +64,7 @@ class ListviewWidget extends StatelessWidget {
   void loadHomePage() async{
     if(language.title=="Hindi"){
       applic.onLocaleChanged(new Locale('hi',''));
+      SharedPref().setStoredLanguage("Hindi");
       await viewModel.setHomePageSections("https://zeenews.india.com/hindi/pwaapi/home.php");
       await viewModel.setSectionList();
       _makeGetRequest();

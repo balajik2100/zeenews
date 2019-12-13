@@ -1,4 +1,0 @@
-#Thu Dec 12 19:08:18 IST 2019
-base.0=/Users/ravi/Documents/zee/z5x/zeenews/build/app/intermediates/dex/release/mergeDexRelease/out/classes.dex
-path.0=classes.dex
-renamed.0=classes.dex

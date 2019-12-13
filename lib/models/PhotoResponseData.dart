@@ -71,8 +71,10 @@ class NewsDataItem {
   List<Entertainment> entertainment;
   List<Sports> sports;
   List<Business> business;
+  List<DNA> dna;
 
-  NewsDataItem({this.entertainment, this.sports, this.business});
+
+  NewsDataItem({this.entertainment, this.sports, this.business,this.dna});
 
   NewsDataItem.fromJson(Map<String, dynamic> json) {
     if (json['entertainment'] != null) {
@@ -92,6 +94,11 @@ class NewsDataItem {
       json['business'].forEach((v) {
         business.add(new Business.fromJson(v));
       });
+    }if (json['dna'] != null) {
+      dna = new List<DNA>();
+      json['dna'].forEach((v) {
+        dna.add(new DNA.fromJson(v));
+      });
     }
   }
 
@@ -106,6 +113,9 @@ class NewsDataItem {
     if (this.business != null) {
       data['business'] = this.business.map((v) => v.toJson()).toList();
     }
+    if (this.dna != null) {
+      data['dna'] = this.dna.map((v) => v.toJson()).toList();
+    }
     return data;
   }
 }
@@ -116,8 +126,10 @@ class Sports {
   String sectionId;
   String sectionUrl;
   List<Item> photos;
+  List<Item> videos;
+  List<Item> dna;
 
-  Sports({this.name, this.sectionId, this.sectionUrl, this.photos});
+  Sports({this.name, this.sectionId, this.sectionUrl, this.photos,this.videos,this.dna});
 
   Sports.fromJson(Map<String, dynamic> json) {
     name = json['name'];
@@ -129,6 +141,12 @@ class Sports {
         photos.add(new Item.fromJson(v));
       });
     }
+    if (json['videos'] != null) {
+      videos = new List<Item>();
+      json['videos'].forEach((v) {
+        videos.add(new Item.fromJson(v));
+      });
+    }
   }
 
   Map<String, dynamic> toJson() {
@@ -136,18 +154,61 @@ class Sports {
     data['name'] = this.name;
     data['section_id'] = this.sectionId;
     data['section_url'] = this.sectionUrl;
-    if (this.photos != null) {
-      data['photos'] = this.photos.map((v) => v.toJson()).toList();
-    }
+    if (this.photos != null) {      data['photos'] = this.photos.map((v) => v.toJson()).toList();    }
+    if (this.videos != null) {      data['videos'] = this.videos.map((v) => v.toJson()).toList();    }
+    if (this.dna != null) {      data['dna'] = this.dna.map((v) => v.toJson()).toList();    }
     return data;
   }
 }
+
+class DNA {
+  String name;
+  String sectionId;
+  String sectionUrl;
+  List<Item> photos;
+  List<Item> videos;
+  List<Item> dna;
+
+  DNA({this.name, this.sectionId, this.sectionUrl, this.photos,this.videos});
+
+  DNA.fromJson(Map<String, dynamic> json) {
+    name = json['name'];
+    sectionId = json['section_id'];
+    sectionUrl = json['section_url'];
+    if (json['photos'] != null) {
+      photos = new List<Item>();
+      json['photos'].forEach((v) {
+        photos.add(new Item.fromJson(v));
+      });
+    }
+    if (json['videos'] != null) {
+      videos = new List<Item>();
+      json['videos'].forEach((v) {
+        videos.add(new Item.fromJson(v));
+      });
+    }
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['name'] = this.name;
+    data['section_id'] = this.sectionId;
+    data['section_url'] = this.sectionUrl;
+    if (this.photos != null) {      data['photos'] = this.photos.map((v) => v.toJson()).toList();    }
+    if (this.videos != null) {      data['videos'] = this.videos.map((v) => v.toJson()).toList();    }
+    if (this.dna != null) {      data['dna'] = this.dna.map((v) => v.toJson()).toList();    }
+    return data;
+  }
+}
+
 
 class Business {
   String name;
   String sectionId;
   String sectionUrl;
   List<Item> photos;
+  List<Item> videos;
+  List<Item> dna;
 
   Business({this.name, this.sectionId, this.sectionUrl, this.photos});
 
@@ -161,6 +222,12 @@ class Business {
         photos.add(new Item.fromJson(v));
       });
     }
+    if (json['videos'] != null) {
+      videos = new List<Item>();
+      json['videos'].forEach((v) {
+        videos.add(new Item.fromJson(v));
+      });
+    }
   }
 
   Map<String, dynamic> toJson() {
@@ -168,9 +235,9 @@ class Business {
     data['name'] = this.name;
     data['section_id'] = this.sectionId;
     data['section_url'] = this.sectionUrl;
-    if (this.photos != null) {
-      data['photos'] = this.photos.map((v) => v.toJson()).toList();
-    }
+    if (this.photos != null) {      data['photos'] = this.photos.map((v) => v.toJson()).toList();    }
+    if (this.videos != null) {      data['videos'] = this.videos.map((v) => v.toJson()).toList();    }
+    if (this.dna != null) {      data['dna'] = this.dna.map((v) => v.toJson()).toList();    }
     return data;
   }
 }
@@ -180,8 +247,10 @@ class Entertainment {
   String sectionId;
   String sectionUrl;
   List<Item> photos;
+  List<Item> videos;
+  List<Item> dna;
 
-  Entertainment({this.name, this.sectionId, this.sectionUrl, this.photos});
+  Entertainment({this.name, this.sectionId, this.sectionUrl, this.photos,this.videos});
 
   Entertainment.fromJson(Map<String, dynamic> json) {
     name = json['name'];
@@ -193,6 +262,12 @@ class Entertainment {
         photos.add(new Item.fromJson(v));
       });
     }
+    if (json['videos'] != null) {
+      videos = new List<Item>();
+      json['videos'].forEach((v) {
+        videos.add(new Item.fromJson(v));
+      });
+    }
   }
 
   Map<String, dynamic> toJson() {
@@ -200,9 +275,9 @@ class Entertainment {
     data['name'] = this.name;
     data['section_id'] = this.sectionId;
     data['section_url'] = this.sectionUrl;
-    if (this.photos != null) {
-      data['photos'] = this.photos.map((v) => v.toJson()).toList();
-    }
+    if (this.photos != null) {      data['photos'] = this.photos.map((v) => v.toJson()).toList();    }
+    if (this.videos != null) {      data['videos'] = this.videos.map((v) => v.toJson()).toList();    }
+    if (this.dna != null) {      data['dna'] = this.dna.map((v) => v.toJson()).toList();    }
     return data;
   }
 }

@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import 'package:share/share.dart';
 import 'package:zeenews/interfaces/ZeeNewsAPIInterface.dart';
 import 'package:zeenews/models/DetailResponseData.dart';
 import 'package:zeenews/models/LanguageResponseData.dart';
@@ -8,6 +9,7 @@ import 'package:zeenews/models/LiveResponseData.dart';
 import 'package:zeenews/models/PhotoResponseData.dart';
 import 'package:zeenews/models/PhotoResponseData.dart' as prefix0;
 import 'package:zeenews/models/VideoResponseData.dart';
+import 'package:zeenews/utils/LocalStorageService.dart';
 import 'package:zeenews/utils/Types.dart';
 import 'package:zeenews/models/HomeReponseData.dart';
 import 'package:zeenews/models/SectionResponseData.dart';
@@ -165,8 +167,16 @@ class ZeeAPIService implements ZeeNewsAPIInterface {
   @override
   Future<DetailResponseData> getDetailsView(String id) async {
     // TODO: implement getLanguageMenu
-    var response = await _client.get(Configuration.DETAILS_VIEW_URL + id);
+    String detailsURI="";
+    String lang="";
+    final String langugae = await SharedPref().getStoredLanguage();
+    if(langugae=="Hindi")
+      detailsURI =Configuration.DETAILS_VIEW_URL_HINDI;
+    else
+      detailsURI =Configuration.DETAILS_VIEW_URL;
+    var response = await _client.get(detailsURI + id);
     if (response.statusCode == 200) {
+      print(response.body);
       var data = json.decode(response.body);
       DetailResponseData details = DetailResponseData.fromJson(data);
       return details;
