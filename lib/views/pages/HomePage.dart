@@ -8,6 +8,7 @@ import 'package:zeenews/utils/ZeeNewsStyles.dart';
 import 'package:zeenews/view_models/MainPageViewModel.dart';
 import 'package:zeenews/views/pages/Hamburger.dart';
 import 'package:zeenews/views/widgets/AddNewTab.dart';
+import 'package:zeenews/views/widgets/AddNewTab.dart' as prefix0;
 import 'package:zeenews/views/widgets/DynamicPage.dart';
 import 'package:zeenews/views/widgets/HomeSection.dart';
 import 'package:zeenews/views/widgets/LiveSection.dart';

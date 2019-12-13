@@ -20,7 +20,7 @@ class ScoreCardWidget extends StatelessWidget {
             Container(
                 padding: EdgeInsets.all(5.0),
                 alignment: Alignment.center,
-                child: Text("India Tour to Austrial-3rd ODI match")),
+                child: Text(data.title!=null?data.title:"")),
             Container(
               padding: EdgeInsets.all(6.0),
               child: Row(

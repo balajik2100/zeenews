@@ -81,6 +81,7 @@ flutter:
     - assets/images/tag.png
     - assets/images/whatsapp.png
     - assets/images/volumeup.png
+    - assets/images/coins.png
     - locale/en.json
     - locale/hi.json
 
