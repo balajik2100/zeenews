@@ -17,6 +17,9 @@ class CustomColors {
   static const PrimaryDarkColor =  Color(0xFF3366FF);
   static const ErroColor =  Color(0xFF3366FF);
   static const ChipBackgroundColor =  Color(0xFFE1E4F3);
+
+  static const CoinColor =  Color(0xFFFEDB41);
+  static const CoinTextColor =  Color(0xFFFBA700);
 }
 class Configuration {
 
@@ -26,14 +29,18 @@ class Configuration {
   static const String BASE_URL = "https://zeenews.india.com";
 
 
+
   //Dynamic Section Menu
   static const String SECTION_LIST_URL =BASE_URL+"/pwaapi/sectionlist.php";
-
+  static const String SECTION_LIST_URL_HINDI =BASE_URL+"/hindi/pwaapi/sectionlist.php";
   //Language API
-  static const String LANGUAGE_MENU_URL =BASE_URL+"/pwaapi/languagemeu.php";
+
+//  static const String LANGUAGE_MENU_URL =BASE_URL+"/pwaapi/languagemenu.php";
+  static const String LANGUAGE_MENU_URL =BASE_URL+"/pwaapi/languagemenu.php?v2";
 
   //Sections API
   static const String HOME_SECTION_URL =BASE_URL+"/pwaapi/home.php";
+  static const String HOME_SECTION_URL_HINDI =BASE_URL+"/hindi/pwaapi/home.php";
   static const String LIVE_SECTION_URL =BASE_URL+"/pwaapi/livetv.php";
   static const String PHOTOS_SECTION_URL =BASE_URL+"/pwaapi/photolist.php";
   static const String VIDEOS_SECTION_URL =BASE_URL+"/pwaapi/videolist.php";

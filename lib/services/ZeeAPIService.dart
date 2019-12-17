@@ -53,7 +53,11 @@ class ZeeAPIService implements ZeeNewsAPIInterface {
     if (selectedURL != "") {
       url = selectedURL;
     } else {
-      url = Configuration.HOME_SECTION_URL;
+      final String langugae = await SharedPref().getStoredLanguage();
+      if(langugae=="Hindi")
+        url =Configuration.HOME_SECTION_URL_HINDI;
+      else
+        url =Configuration.HOME_SECTION_URL;
     }
     var response = await _client.get((url));
     if (response.statusCode == 200) {

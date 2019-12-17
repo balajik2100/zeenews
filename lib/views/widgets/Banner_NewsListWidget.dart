@@ -112,7 +112,7 @@ class Banner_NewsWidget extends StatelessWidget {
           child: Padding(
               padding: EdgeInsets.only(
                   left: 15.0, top: 5.0, bottom: 5.0, right: 5.0),
-              child: Container(child: Icon(Icons.arrow_right))),
+              child: Container(child: Icon(Icons.arrow_forward,color: Colors.red))),
         )
       ],
     );

@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:http/http.dart';
+import 'package:zeenews/AppLocalizations.dart';
 import 'package:zeenews/models/SectionResponseData.dart';
 import 'package:zeenews/services/ZeeAPIService.dart';
 import 'package:zeenews/utils/LocalStorageService.dart';
@@ -107,6 +108,7 @@ class SplashState extends State<Splash> {
   @override
   void initState() {
     setState(() {
+      loadLocale();
       checkConnectivity();
     });
   }
@@ -115,8 +117,9 @@ class SplashState extends State<Splash> {
     var connectivityResult = await (Connectivity().checkConnectivity());
     if (connectivityResult == ConnectivityResult.wifi ||
         connectivityResult == ConnectivityResult.mobile) {
-      getLocation();
+
       _makeGetRequest();
+      getLocation();
     } else {
       networkDialog();
     }
@@ -144,8 +147,14 @@ class SplashState extends State<Splash> {
         });
       });
     }
+    String url="";
+    final String langugae = await SharedPref().getStoredLanguage();
+    if(langugae=="Hindi")
+      url =Configuration.SECTION_LIST_URL_HINDI;
+    else
+      url =Configuration.SECTION_LIST_URL;
 
-    Response response = await get(Configuration.SECTION_LIST_URL);
+    Response response = await get(url);
 
     if (response != null) {
       // sample info available in response
@@ -174,13 +183,17 @@ class SplashState extends State<Splash> {
   }
 
 
+
   void getLocation() async {
-    Position position = await Geolocator()
-        .getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
-    print("======>>>>");
-    print(position);
-    if(position!=null)
-      _getPlace(position);
+    try {
+      Position position = await Geolocator().getCurrentPosition(
+          desiredAccuracy: LocationAccuracy.high);
+      if (position != null) {
+        _getPlace(position);
+      }
+    }catch(e){
+      print(e);
+    }
   }
   String _address = ""; // create this variable
 
@@ -206,9 +219,20 @@ class SplashState extends State<Splash> {
     }
 
   }
+
+
   @override
   void dispose() {
     // TODO: implement dispose
     super.dispose();
+  }
+
+  void loadLocale() async{
+    final String appDefaultLanguage = await SharedPref().getStoredLanguage();
+    if(appDefaultLanguage=="Hindi"){
+      applic.onLocaleChanged(new Locale('hi',''));
+    }else{
+      applic.onLocaleChanged(new Locale('en',''));
+    }
   }
 }

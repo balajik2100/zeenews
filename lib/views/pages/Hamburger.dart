@@ -83,7 +83,7 @@ class HamburgerState extends State<Hamburger> {
                     widget.sections[index].title,
                     style: TextStyle(color: Colors.black, fontSize: 16),
                   ),
-                  leading:Container(height: 20,width: 20,child:SvgPicture.network(widget.sections[index].icon_url!=null?widget.sections[index].icon_url:"")),
+                  leading:Container(height: 20,width: 20,child:SvgPicture.network(widget.sections[index].icon_url!=null?widget.sections[index].icon_url:"",fit: BoxFit.contain,)),
                   onTap: () {
                     Navigator.pop(context);
                     Navigator.of(context).push(MaterialPageRoute(
@@ -98,7 +98,7 @@ class HamburgerState extends State<Hamburger> {
               } else if (widget.sections[index].subSections is List) {
                 return ExpansionTile(
                   title: Text(widget.sections[index].title),
-                  leading: Container(height: 20,width: 20,child:SvgPicture.network(widget.sections[index].icon_url!=null?widget.sections[index].icon_url:"")),
+                  leading: Container(height: 20,width: 20,child:SvgPicture.network(widget.sections[index].icon_url!=null?widget.sections[index].icon_url:"",fit: BoxFit.contain,)),
                   children: [
                     getItemsListForSideMenu(context, widget.sections[index])
                   ],
