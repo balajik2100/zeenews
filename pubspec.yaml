@@ -49,6 +49,7 @@ dependencies:
   geolocator: ^4.0.3
   marquee_flutter: ^0.1.4
   flutter_svg: ^0.15.0
+  flutter_html: ^0.11.1
 
 dev_dependencies:
   flutter_test:
@@ -82,6 +83,8 @@ flutter:
     - assets/images/whatsapp.png
     - assets/images/volumeup.png
     - assets/images/coins.png
+    - assets/images/appicon.png
+    - assets/images/notification.png
     - locale/en.json
     - locale/hi.json
 

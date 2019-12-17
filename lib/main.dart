@@ -73,6 +73,7 @@ class _ZeeHomeState extends State<ZeeHome> {
     return MaterialApp(
       theme: new ThemeData(
         primarySwatch: Colors.red,
+        primaryColor: Colors.white
       ),
       localizationsDelegates: [
         _localeOverrideDelegate,

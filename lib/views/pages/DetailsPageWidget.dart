@@ -1,8 +1,11 @@
+import 'dart:convert';
+import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
 import 'package:zeenews/main.dart';
 import 'package:zeenews/models/DetailResponseData.dart';
 import 'package:zeenews/models/HomeReponseData.dart';
+import 'package:zeenews/utils/RenderHtml.dart';
 import 'package:zeenews/utils/Utils.dart';
 import 'package:zeenews/view_models/MainPageViewModel.dart';
 import 'package:zeenews/views/widgets/ChipWidget.dart';
@@ -369,5 +372,8 @@ class _DetailsPageWidget extends State<DetailsPageWidget> {
     } else {
       return false;
     }
+  }
+  Future<void> loadHtmlFromAssets(String text, controller) async {
+    controller.loadUrl(Uri.dataFromString(text.toString().trim(), mimeType: 'text/html', encoding: Encoding.getByName('utf-8')).toString());
   }
 }

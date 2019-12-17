@@ -9,68 +9,97 @@ import 'package:zeenews/utils/LocalStorageService.dart';
 import 'package:zeenews/utils/ZeeNewsStyles.dart';
 import 'package:zeenews/view_models/MainPageViewModel.dart';
 import 'package:zeenews/views/pages/HomePage.dart';
+import 'package:zeenews/views/pages/SplashScreen.dart';
 
-// ignore: must_be_immutable
-class ListviewWidget extends StatelessWidget {
+
+class ListviewWidget extends StatefulWidget{
   Langauages language;
   BuildContext context;
   MainPageViewModel viewModel;
+  ListviewWidget(
+      {@required this.language,
+        @required this.context,
+        @required this.viewModel});
+  @override
+  State<StatefulWidget> createState() {
+    // TODO: implement createState
+    return ListviewWidgetState();
+  }
 
-  ListviewWidget({@required this.language, @required this.context,@required this.viewModel});
+}
+
+// ignore: must_be_immutable
+class ListviewWidgetState extends State<ListviewWidget> {
+
+
+
 
   @override
   Widget build(BuildContext context) {
-
-    var title =Text(
-      language.regTitle.toString(),
-
-      maxLines: 1,
-      textAlign: TextAlign.center,
-      style: TextStyle(
-        color: CustomColors.SECTION_TITLE_TXT_COLOR,
-        fontSize: CustomFontStyle.SECTION_TITLE_SIZE,
-      ));
-
+    var title = Text(widget.language.regTitle.toString(),
+        maxLines: 2,
+        textAlign: TextAlign.center,
+        style: TextStyle(
+          color: CustomColors.SECTION_TITLE_TXT_COLOR,
+          fontSize: CustomFontStyle.SECTION_TITLE_SIZE,
+        ));
 
     var bannerWidget = Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       mainAxisSize: MainAxisSize.min,
       children: <Widget>[
-        GestureDetector(onTap: (){
-          loadHomePage();
-        },child:Container(
-            padding: EdgeInsets.all(5.0),
-            decoration: BoxDecoration(
-              border: Border.all(
-                  width: 0.2,
-                  color: Colors.grey //                   <--- border width here
-              ),
-            ),
-            child:
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-                Image.network(language.thumbnailUrl,
-                    height: 50.0, width: 80.0, fit: BoxFit.fill),
-                title,
-              ],
-            )) )
+        GestureDetector(
+            onTap: () {
+              setState(() {
+                loadHomePage();
+              });
 
+            },
+            child: Container(
+                padding: EdgeInsets.all(5.0),
+                decoration: BoxDecoration(
+                  border: Border.all(
+                      width: 0.2,
+                      color: Colors
+                          .grey //                   <--- border width here
+                      ),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    Image.network(widget.language.thumbnailUrl,
+                        height: 50.0, width: 80.0, fit: BoxFit.fill),
+                    Container(width: 100, child: title),
+                  ],
+                )))
       ],
     );
     // TODO: implement build
     return bannerWidget;
   }
-  void loadHomePage() async{
-    if(language.title=="Hindi"){
-      applic.onLocaleChanged(new Locale('hi',''));
+
+  void loadHomePage() async {
+    if (  widget.language.title == "Hindi") {
+      applic.onLocaleChanged(new Locale('hi', ''));
       SharedPref().setStoredLanguage("Hindi");
-      await viewModel.setHomePageSections("https://zeenews.india.com/hindi/pwaapi/home.php");
-      await viewModel.setSectionList();
-      _makeGetRequest();
+      await widget.viewModel.setHomePageSections(
+          "https://zeenews.india.com/hindi/pwaapi/home.php");
+      // _makeGetRequest();
+    } else {
+      applic.onLocaleChanged(new Locale('en', ''));
+      SharedPref().setStoredLanguage("");
+      await widget.viewModel
+          .setHomePageSections("https://zeenews.india.com/pwaapi/home.php");
     }
+    List<String> tempList = [];
+    Route route = MaterialPageRoute(
+        builder: (context) => Splash(
+            viewModel: widget.viewModel, list: tempList));
+    Navigator.pushReplacement(context, route);
+
     Navigator.pop(context);
   }
+
   _makeGetRequest() async {
     List<String> tempList = [];
     print("+++++++++++++++++");
@@ -84,9 +113,9 @@ class ListviewWidget extends StatelessWidget {
       });
     }
 
-   // Map userHeader = {"Content-type": "application/json"};
+     Map userHeader = {"Content-type": "application/json"};
 
-    Response response = await get("https://zeenews.india.com/hindi/pwaapi/sectionlist.php");
+    Response response = await get(Configuration.SECTION_LIST_URL_HINDI);
 
     if (response != null) {
       // sample info available in response
@@ -95,16 +124,16 @@ class ListviewWidget extends StatelessWidget {
       String jsondata = response.body.trim();
       Map<String, String> headers = response.headers;
 
-
       print("SPlash:::::" + jsondata.toString());
       // TODO convert json to object...
       final jsonResponse = json.decode(jsondata);
 
-
-     SectionResponseData section = new SectionResponseData.fromMap(jsonResponse);
+      SectionResponseData section =  new SectionResponseData.fromMap(jsonResponse);
 
       if (section != null) {
-        Route route = MaterialPageRoute(builder: (context) => MainPage(viewModel: viewModel, list: tempList, section: section));
+        Route route = MaterialPageRoute(
+            builder: (context) => MainPage(
+                viewModel: widget.viewModel, list: tempList, section: section));
         Navigator.pushReplacement(context, route);
       }
     }

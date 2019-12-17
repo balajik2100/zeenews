@@ -72,7 +72,7 @@ class _MainPageState extends State<MainPage>
   Widget build(BuildContext context) {
     TabBar tabBar = TabBar(
       controller: tabController,
-      indicatorColor: Colors.white,
+      indicatorColor: Colors.red,
       indicatorWeight: 3.0,
       isScrollable: true,
       tabs: tabWidgets,
@@ -80,13 +80,21 @@ class _MainPageState extends State<MainPage>
 
     return new Scaffold(
       appBar: AppBar(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(
+            bottom: Radius.circular(1),
+          ),
+        ),
         title: Container(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Row(
                 children: <Widget>[
-                  Text(Translations.of(context).text('title')!=null?Translations.of(context).text('title'):"Zee News"),
+                  Container(
+                      width: 60,
+                      height: 60,
+                      child: Image.asset("assets/images/appicon.png")),
                   GestureDetector(
                       onTap: () {
                         showDialog(
@@ -94,10 +102,12 @@ class _MainPageState extends State<MainPage>
                             builder: (BuildContext context) {
                               return ScopedModel<MainPageViewModel>(
                                   model: widget.viewModel,
-                                  child: CustomDialog(context: context,viewModel: widget.viewModel));
+                                  child: CustomDialog(
+                                      context: context,
+                                      viewModel: widget.viewModel));
                             });
                       },
-                      child:Text("(E)")),
+                      child: Text("(E)")),
                 ],
               ),
               Row(
@@ -124,7 +134,8 @@ class _MainPageState extends State<MainPage>
                           );
                         } else {
                           actionIcon = new Icon(Icons.search);
-                          appBarTitle = new Text(Translations.of(context).text('title'),
+                          appBarTitle = new Text(
+                              Translations.of(context).text('title'),
                               style: TextStyle(
                                   fontSize: CustomFontStyle.APP_FONT_SIZE,
                                   color: Colors.white));
@@ -133,9 +144,25 @@ class _MainPageState extends State<MainPage>
                     },
                   ),
                   GestureDetector(
-                      onTap: () {}, child: Icon(Icons.notifications)),
+                    onTap: () {},
+                    child: Container(
+                        width: 20,
+                        height: 20,
+                        child: Image.asset("assets/images/notification.png")),
+                  ),
                   GestureDetector(
-                      onTap: () {}, child: Text(" C",)),
+                      onTap: () {},
+                      child: Container(
+                        margin: EdgeInsets.only(left: 2.0),
+                        padding: EdgeInsets.all(1.0),
+                          decoration: BoxDecoration(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(16.0)),
+                              color: CustomColors.CoinColor),
+                          width: 22,
+                          height: 22,
+                          alignment: Alignment.center,
+                          child: Text("Z",style: TextStyle(color:CustomColors.CoinTextColor,fontSize: 14),))),
                 ],
               ),
             ],
@@ -152,7 +179,9 @@ class _MainPageState extends State<MainPage>
       drawer: ScopedModel<MainPageViewModel>(
           model: widget.viewModel,
           child: Hamburger(
-              viewModel: mainPageVM, sections: widget.section.sections,tabController:tabController)),
+              viewModel: mainPageVM,
+              sections: widget.section.sections,
+              tabController: tabController)),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.of(context).push(MaterialPageRoute(
